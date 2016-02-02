@@ -1,0 +1,842 @@
+Archive member included because of file (symbol)
+
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+                              ./template.o (xPortGetFreeHeapSize)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o) (vTaskSuspendAll)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (pxPortInitialiseStack)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o) (system_tick)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o) (__system_time)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (vListInitialise)
+/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (xconfigTimerForRunTimeStats)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                              (vfprintf)
+/Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                              ./template.o (usart_xflushRx)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (__udivmodsi4)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o) (__prologue_saves__)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o) (__epilogue_restores__)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o (exit)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                              ./template.o (__do_clear_bss)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (strlen_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (memset)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (fputc)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (sprintf)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (vsnprintf)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                              /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (vsnprintf_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+
+Allocating common symbols
+Common symbol       size              file
+
+usartComBuf         0x74              /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+usartfd             0x2               ./template.o
+__system_time       0x4               /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00800200         0x0000fe00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+LOAD ./template.o
+LOAD /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libm.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a
+LOAD /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a
+LOAD /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x58d0
+ *(.vectors)
+ .vectors       0x00000000       0xe4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x000000e4       0x41 ./template.o
+ .progmem.data  0x00000125        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .progmem.data  0x0000012d       0xfa /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                0x00000228                . = ALIGN (0x2)
+ *fill*         0x00000227        0x1 00
+                0x00000228                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000228        0x0 linker stubs
+ *(.trampolines*)
+                0x00000228                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ .lowtext       0x00000228      0x2e8 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ *(.lowtext*)
+                0x00000510                __ctors_start = .
+ *(.ctors)
+                0x00000510                __ctors_end = .
+                0x00000510                __dtors_start = .
+ *(.dtors)
+                0x00000510                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000510        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000510                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000510       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000520       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000520                __do_copy_data
+ .init4         0x0000053c       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                0x0000053c                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000054c        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init9)
+ *(.text)
+ .text          0x00000554        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000554                __vector_38
+                0x00000554                __vector_22
+                0x00000554                __vector_28
+                0x00000554                __vector_1
+                0x00000554                __vector_34
+                0x00000554                __vector_24
+                0x00000554                __vector_12
+                0x00000554                __vector_46
+                0x00000554                __bad_interrupt
+                0x00000554                __vector_6
+                0x00000554                __vector_31
+                0x00000554                __vector_35
+                0x00000554                __vector_39
+                0x00000554                __vector_3
+                0x00000554                __vector_23
+                0x00000554                __vector_30
+                0x00000554                __vector_45
+                0x00000554                __vector_11
+                0x00000554                __vector_13
+                0x00000554                __vector_17
+                0x00000554                __vector_19
+                0x00000554                __vector_56
+                0x00000554                __vector_7
+                0x00000554                __vector_49
+                0x00000554                __vector_41
+                0x00000554                __vector_43
+                0x00000554                __vector_27
+                0x00000554                __vector_5
+                0x00000554                __vector_33
+                0x00000554                __vector_47
+                0x00000554                __vector_4
+                0x00000554                __vector_44
+                0x00000554                __vector_9
+                0x00000554                __vector_2
+                0x00000554                __vector_21
+                0x00000554                __vector_15
+                0x00000554                __vector_29
+                0x00000554                __vector_40
+                0x00000554                __vector_8
+                0x00000554                __vector_48
+                0x00000554                __vector_14
+                0x00000554                __vector_53
+                0x00000554                __vector_10
+                0x00000554                __vector_50
+                0x00000554                __vector_16
+                0x00000554                __vector_18
+                0x00000554                __vector_20
+                0x00000554                __vector_42
+ .text          0x00000558        0x0 ./template.o
+ .text          0x00000558        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .text          0x00000558        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .text          0x00000558        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .text          0x00000558       0x38 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+                0x00000558                system_tick
+ .text          0x00000590        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .text          0x00000590        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .text          0x00000590        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .text          0x00000590      0x712 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                0x00000590                vfprintf
+ .text          0x00000ca2        0x0 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .text          0x00000ca2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .text          0x00000ca2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .text          0x00000ca2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .text          0x00000ca2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .text          0x00000ca2        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .text          0x00000ca2      0x1b0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                0x00000ca2                __ftoa_engine
+ .text          0x00000e52       0x12 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+                0x00000e52                strlen_P
+ .text          0x00000e64       0x16 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                0x00000e64                strnlen_P
+ .text          0x00000e7a        0xe /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+                0x00000e7a                memset
+ .text          0x00000e88       0x16 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+                0x00000e88                strnlen
+ .text          0x00000e9e       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                0x00000e9e                fputc
+ .text          0x00000ef6       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                0x00000ef6                sprintf
+ .text          0x00000f3e       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                0x00000f3e                vsnprintf
+ .text          0x00000f92       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                0x00000f92                vsnprintf_P
+ .text          0x00000fe6       0xbc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                0x00000fe6                __ultoa_invert
+                0x000010a2                . = ALIGN (0x2)
+ *(.text.*)
+ .text.vApplicationStackOverflowHook
+                0x000010a2        0x2 ./template.o
+                0x000010a2                vApplicationStackOverflowHook
+ .text.main     0x000010a4       0xbc ./template.o
+                0x000010a4                main
+ .text.TaskTurnOnLED
+                0x00001160       0x42 ./template.o
+ .text.hot      0x000011a2      0x2f8 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+                0x000011a2                xPortGetFreeHeapSize
+                0x000011b8                vPortFree
+                0x0000129e                pvPortMalloc
+                0x000011b6                vPortInitialiseBlocks
+                0x000011ac                xPortGetMinimumEverFreeHeapSize
+ .text.hot      0x0000149a     0x3098 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x00001bc4                vTaskPlaceOnUnorderedEventList
+                0x00002148                vTaskGetRunTimeStats
+                0x00004150                vTaskEndScheduler
+                0x00001ca2                vTaskPlaceOnEventList
+                0x0000415c                xTaskGenericCreate
+                0x000016e0                uxTaskGetStackHighWaterMark
+                0x00001b16                xTaskResumeFromISR
+                0x000014a6                xTaskGetTickCount
+                0x000018ce                xTaskRemoveFromEventList
+                0x00004086                vTaskDelete
+                0x000014e4                xTaskCheckForTimeOut
+                0x0000149a                vTaskSuspendAll
+                0x000014bc                xTaskGetTickCountFromISR
+                0x0000175a                vTaskPriorityDisinherit
+                0x000017be                vTaskPriorityInherit
+                0x00003788                vTaskResume
+                0x00001d72                vTaskSwitchContext
+                0x00001578                vTaskSetTaskNumber
+                0x00003814                vTaskSuspend
+                0x000014c8                uxTaskGetNumberOfTasks
+                0x00002c96                vTaskList
+                0x0000156a                uxTaskGetTaskNumber
+                0x00003d46                vTaskDelayUntil
+                0x0000171e                xTaskGetCurrentTaskHandle
+                0x0000185e                xTaskRemoveFromUnorderedEventList
+                0x00001ece                xTaskResumeAll
+                0x00004366                vTaskStartScheduler
+                0x00001562                vTaskMissedYield
+                0x00001960                xTaskIncrementTick
+                0x00003a36                vTaskDelay
+                0x000014ce                vTaskSetTimeOutState
+                0x0000172a                uxTaskResetEventItemValue
+ .text.uxTaskGetSystemState
+                0x00004532      0x102 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x00004532                uxTaskGetSystemState
+ .text.hot      0x00004634      0x12a /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x000046ca                xPortStartScheduler
+                0x0000475c                vPortEndScheduler
+                0x00004634                pxPortInitialiseStack
+ .text.vPortYieldFromTick
+                0x0000475e       0xf8 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x0000475e                vPortYieldFromTick
+ .text.__vector_32
+                0x00004856        0x6 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x00004856                __vector_32
+ .text.vPortYield
+                0x0000485c       0xc2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x0000485c                vPortYield
+ .text.vListInitialise
+                0x0000491e       0x20 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x0000491e                vListInitialise
+ .text.vListInitialiseItem
+                0x0000493e        0x8 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x0000493e                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00004946       0x3e /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00004946                vListInsertEnd
+ .text.vListInsert
+                0x00004984       0x64 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00004984                vListInsert
+ .text.uxListRemove
+                0x000049e8       0x56 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x000049e8                uxListRemove
+ .text.xconfigTimerForRunTimeStats
+                0x00004a3e       0x18 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+                0x00004a3e                xconfigTimerForRunTimeStats
+ .text.setDefaultUSART
+                0x00004a56        0x6 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004a56                setDefaultUSART
+ .text.usartWrite
+                0x00004a5c       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004a5c                usartWrite
+ .text.usartRead
+                0x00004aae       0x5c /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004aae                usartRead
+ .text.usart_xflushRx
+                0x00004b0a       0x82 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004b0a                usart_xflushRx
+ .text.usart_AvailableCharRx
+                0x00004b8c       0x2a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004b8c                usart_AvailableCharRx
+ .text.usart_xgetChar
+                0x00004bb6       0x8a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004bb6                usart_xgetChar
+ .text.usart_xputChar
+                0x00004c40      0x116 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004c40                usart_xputChar
+ .text.usartCheckRxComplete
+                0x00004d56       0x24 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004d56                usartCheckRxComplete
+ .text.usart_rx_isr
+                0x00004d7a       0xd0 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004d7a                usart_rx_isr
+ .text.__vector_54
+                0x00004e4a       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004e4a                __vector_54
+ .text.__vector_51
+                0x00004e9c       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004e9c                __vector_51
+ .text.__vector_36
+                0x00004eee       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004eee                __vector_36
+ .text.__vector_25
+                0x00004f40       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004f40                __vector_25
+ .text.usart_tx_isr
+                0x00004f92       0xb6 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00004f92                usart_tx_isr
+ .text.__vector_55
+                0x00005048       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005048                __vector_55
+ .text.__vector_52
+                0x0000509a       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000509a                __vector_52
+ .text.__vector_37
+                0x000050ec       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000050ec                __vector_37
+ .text.__vector_26
+                0x0000513e       0x52 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000513e                __vector_26
+ .text.usart_xfprint_P
+                0x00005190       0x48 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005190                usart_xfprint_P
+ .text.usart_xprint_P
+                0x000051d8        0xc /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000051d8                usart_xprint_P
+ .text.usart_fprint_P
+                0x000051e4       0x8a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000051e4                usart_fprint_P
+ .text.usart_print_P
+                0x0000526e        0xc /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000526e                usart_print_P
+ .text.usart_xfprint
+                0x0000527a       0x50 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000527a                usart_xfprint
+ .text.usart_xfprintf_P_arg
+                0x000052ca       0x7a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000052ca                usart_xfprintf_P_arg
+ .text.usart_xfprintf_arg
+                0x00005344       0x7a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005344                usart_xfprintf_arg
+ .text.usart_xprint
+                0x000053be        0xc /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000053be                usart_xprint
+ .text.usart_fprint
+                0x000053ca       0x84 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000053ca                usart_fprint
+ .text.usart_fprintf_P_arg
+                0x0000544e       0x5c /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000544e                usart_fprintf_P_arg
+ .text.usart_fprintf_arg
+                0x000054aa       0x58 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000054aa                usart_fprintf_arg
+ .text.usart_print
+                0x00005502        0xc /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005502                usart_print
+ .text.usart_xfprintf_P
+                0x0000550e       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000550e                usart_xfprintf_P
+ .text.usart_xfprintf
+                0x0000552e       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000552e                usart_xfprintf
+ .text.usart_xprintf_P
+                0x0000554e       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000554e                usart_xprintf_P
+ .text.usart_xprintf
+                0x0000556e       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000556e                usart_xprintf
+ .text.usart_fprintf_P
+                0x0000558e       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000558e                usart_fprintf_P
+ .text.usart_fprintf
+                0x000055ae       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000055ae                usart_fprintf
+ .text.usart_printf_P
+                0x000055ce       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000055ce                usart_printf_P
+ .text.usart_printf
+                0x000055ee       0x20 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000055ee                usart_printf
+ .text.usartClose
+                0x0000560e       0x82 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000560e                usartClose
+ .text.usartOpen
+                0x00005690      0x18a /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005690                usartOpen
+ .text.libgcc   0x0000581a       0x44 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+                0x0000581a                __udivmodsi4
+ .text.libgcc   0x0000585e       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+                0x0000585e                __prologue_saves__
+ .text.libgcc   0x00005896       0x36 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+                0x00005896                __epilogue_restores__
+ .text.libgcc   0x000058cc        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .text.libgcc   0x000058cc        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                0x000058cc                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000058cc        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+                0x000058cc                exit
+                0x000058cc                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000058cc        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000058d0                _etext = .
+
+.data           0x00800200       0x76 load address 0x000058d0
+                0x00800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .data          0x00800200       0x13 ./template.o
+ .data          0x00800213        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data          0x00800213       0x35 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .data          0x00800248        0x0 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ .data          0x00800248        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ *(.data*)
+ .data.xMinimumEverFreeBytesRemaining
+                0x00800248        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data.xFreeBytesRemaining
+                0x0080024a        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data.xNextTaskUnblockTime
+                0x0080024c        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .data.usartReg
+                0x0080024e       0x28 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0080024e                usartReg
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800276                . = ALIGN (0x2)
+                0x00800276                _edata = .
+                0x00800276                PROVIDE (__data_end, .)
+
+.bss            0x00800276     0x12f1
+                0x00800276                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .bss           0x00800276        0x0 ./template.o
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x00800276        0x0 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ .bss           0x00800276        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ *(.bss*)
+ .bss.xBlockAllocatedBit
+                0x00800276        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.pxEnd     0x00800278        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.ucHeap    0x0080027a     0x1200 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.xStart    0x0080147a        0x4 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.pxCurrentTCB
+                0x0080147e        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x0080147e                pxCurrentTCB
+ .bss.uxCurrentNumberOfTasks
+                0x00801480        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTopReadyPriority
+                0x00801481        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xYieldPending
+                0x00801482        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xTickCount
+                0x00801483        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xNumOfOverflows
+                0x00801485        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxSchedulerSuspended
+                0x00801486        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.ulTotalRunTime
+                0x00801487        0x4 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.ulTaskSwitchedInTime
+                0x0080148b        0x4 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxPendedTicks
+                0x0080148f        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xSchedulerRunning
+                0x00801490        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTasksDeleted
+                0x00801491        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTaskNumber
+                0x00801492        0x1 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxReadyTasksLists
+                0x00801493       0x24 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xDelayedTaskList1
+                0x008014b7        0x9 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xDelayedTaskList2
+                0x008014c0        0x9 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxDelayedTaskList
+                0x008014c9        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxOverflowDelayedTaskList
+                0x008014cb        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xPendingReadyList
+                0x008014cd        0x9 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xTasksWaitingTermination
+                0x008014d6        0x9 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xSuspendedTaskList
+                0x008014df        0x9 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.portTickRateHz
+                0x008014e8        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss.ticksRemainingInSec
+                0x008014ea        0x2 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss.defaultUSART
+                0x008014ec        0x1 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x008014ec                defaultUSART
+ *(COMMON)
+ COMMON         0x008014ed        0x2 ./template.o
+                0x008014ed                usartfd
+ COMMON         0x008014ef        0x4 /Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+                0x008014ef                __system_time
+ COMMON         0x008014f3       0x74 /Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x008014f3                usartComBuf
+                0x00801567                PROVIDE (__bss_end, .)
+                0x000058d0                __data_load_start = LOADADDR (.data)
+                0x00005946                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00801567        0x0
+                0x00801567                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00801567                PROVIDE (__noinit_end, .)
+                0x00801567                _end = .
+                0x00801567                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_aranges
+                0x00000020       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_aranges
+                0x00000040       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_aranges
+                0x00000060       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_aranges
+                0x00000080       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_pubnames
+                0x00000000       0x9b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_pubnames
+                0x0000001f       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_pubnames
+                0x0000003b       0x1e /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_pubnames
+                0x00000059       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_pubnames
+                0x00000079       0x22 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_info     0x00000000      0xad9
+ *(.debug_info)
+ .debug_info    0x00000000      0x41d /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_info    0x0000041d      0x166 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_info    0x00000583      0x1b0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_info    0x00000733      0x1d3 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_info    0x00000906      0x1d3 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x54a
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x18f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_abbrev  0x0000018f       0xd9 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_abbrev  0x00000268      0x10c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_abbrev  0x00000374       0xeb /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_abbrev  0x0000045f       0xeb /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_line     0x00000000      0xbad
+ *(.debug_line)
+ .debug_line    0x00000000      0x740 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_line    0x00000740       0xd0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_line    0x00000810      0x125 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_line    0x00000935      0x13b /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_line    0x00000a70      0x13d /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_frame    0x00000000       0xa0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_frame   0x00000020       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_frame   0x00000040       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_frame   0x00000060       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_frame   0x00000080       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_str      0x00000000      0x21a
+ *(.debug_str)
+ .debug_str     0x00000000      0x17a /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                                0x1bb (size before relaxing)
+ .debug_str     0x0000017a       0x22 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                                0x125 (size before relaxing)
+ .debug_str     0x0000019c       0x26 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                                0x14b (size before relaxing)
+ .debug_str     0x000001c2       0x2a /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                                0x156 (size before relaxing)
+ .debug_str     0x000001ec       0x2e /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                                0x15a (size before relaxing)
+
+.debug_loc      0x00000000      0xb0f
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x9ab /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_loc     0x000009ab       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_loc     0x00000a0b       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_loc     0x00000a2f       0x70 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_loc     0x00000a9f       0x70 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(ProjectTemplate.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x18
+ .debug_ranges  0x00000000       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
