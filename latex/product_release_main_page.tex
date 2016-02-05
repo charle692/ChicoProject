@@ -1,0 +1,101 @@
+Foreword\+: provide brief description
+
+This product release document is divided in the following sections\+:
+\begin{DoxyItemize}
+\item \hyperlink{introduction}{1. Introduction}
+\item \hyperlink{requirements}{2. Requirements}
+\item \hyperlink{hardware_design}{3. Hardware Design}
+\item \hyperlink{software_design}{4. Software Design}
+\end{DoxyItemize}
+
+For details on source code and related documentation see \hyperlink{software_design}{Software Design}. \hypertarget{introduction}{}\section{Introduction}\label{introduction}
+\hypertarget{introduction_purpose}{}\subsection{Purpose}\label{introduction_purpose}
+Chico the robot is a specialized Sting Ray robot to mimic the behaviour of some Chihuahua canine. Chico has two modes of operation, the first is to follow a person using a heat sensor as best it can and if it cannot continue this action Chico will panic and spin on the spot. Secondly, the command mode allows Chico to receive commands via a web interface that will trigger various behaviour by the robot.\hypertarget{introduction_scope}{}\subsection{Scope of Sprints}\label{introduction_scope}
+The first sprint 1 aims to have Chico the robot act as a temperature monitor for the physical region it is situated without movement. To accomplish this goal Chico will read temperatures, display data in real time on an L\+CD and indicate ranges of temperatures monitored using different colored L\+E\+DS.\hypertarget{introduction_overview}{}\subsection{Overview}\label{introduction_overview}
+The requirements section provides specific constraints for Chico to operate under as it accomplishes its purpose stated in the first introduction sub section. These requirements consist of hardware actions bound to some upper bound time constraint for the action to be completed by. ~\newline
+ The design section provides the most detailed hardware description and schematics applied to Chico and the software modules used – includes those from A\+P\+Is and original authored for this product. The section will be presented in a top-\/down modular manner decomposing functionality to module of some atomicity of functions. ~\newline
+ The references section includes documentation of software A\+P\+Is, and hardware specifications of components of interest on the Sting\+Ray robot. The materials in this section are directly related to the design subsection software and hardware modules.
+
+List of hardware\+:
+\begin{DoxyItemize}
+\item \hyperlink{hardware_design_stingray}{Stingray Robot}.
+\item \hyperlink{hardware_design_arduino}{Arduino Card}.
+\item \hyperlink{hardware_design_avr}{A\+VR At\+Mega 2560 Microcontroller}.
+\item \hyperlink{hardware_design_servo}{Futaba S148 Servo Standard Precision}.
+\end{DoxyItemize}
+
+Go back to \hyperlink{product_release_main_page}{Release Note\+: Main Menu}. \hypertarget{requirements}{}\section{Requirements}\label{requirements}
+\hypertarget{requirements_flow}{}\subsection{Flow of Functional Requirements}\label{requirements_flow}
+The real-\/time system will accept the input i.\+e. 9 temperature readings, 1 ambient + 8 pixel temperatures; which are read from thermal array sensor. And, the expected output is changing the color of the L\+ED part of the Hydrogen Wi\+Fi shield, to reflect the average temperature and display ambient temperature along with 8 pixels temperatures in form of suitable text string(s) on the L\+CD.\hypertarget{requirements_functions}{}\subsection{Functions}\label{requirements_functions}
+\hypertarget{requirements_led}{}\subsubsection{L\+E\+D functionality}\label{requirements_led}
+
+\begin{DoxyItemize}
+\item Turn on Blue L\+ED as average temperature (T) $<$30 °C, and turn off green, red L\+E\+Ds.
+\item Turn on Green L\+ED as 30 °C $<$=T $<$40 °C, and turn off blue, red L\+E\+Ds.
+\item Turn on Blue L\+ED as T =$>$40 °C, and turn off blue, green L\+E\+Ds.
+\end{DoxyItemize}\hypertarget{requirements_temp}{}\subsubsection{Temperature Measuring}\label{requirements_temp}
+
+\begin{DoxyItemize}
+\item Read a pixel temperature from registers 2 through 9 of T\+P\+A81 Thermopile Array; 8 serial readings.
+\item Read ambient temperature from register 1 after 40ms of the T\+P\+A81 Being positioned in the direction of the area to measure ambience; the 40ms delay applies at start up as well even if the sensor is not moved.
+\item Aggregate ambient temperatures as they are read into an average.
+\end{DoxyItemize}\hypertarget{requirements_lcd}{}\subsubsection{L\+C\+D Displaying}\label{requirements_lcd}
+
+\begin{DoxyItemize}
+\item Able to display two strings on separate lines of the L\+CD.
+\item A string that is longer than 80 bytes will be truncated such that only 80 bytes are sent to the L\+CD.
+\item Display the ambient temperature with the label “\+Ambient\+:” on a line of the L\+CD and the 8 pixel temperatures with the label “8 Pixel” on another line.
+\item The first occurrence of \hyperlink{requirements_led}{L\+ED functionality} should occur after 40-\/45ms to ensure correct readings by T\+P\+A81 Thermopile Array; also after the sensor is moved on any axis the L\+CD should only receive data to display after the 40ms delay.
+\end{DoxyItemize}
+
+Go back to \hyperlink{product_release_main_page}{Release Note\+: Main Menu}. \hypertarget{hardware_design}{}\section{Hardware Design}\label{hardware_design}
+provide brief details for this section. \hypertarget{hardware_design_stingray}{}\subsection{Stingray Robot}\label{hardware_design_stingray}
+\hypertarget{hardware_design_ultrasonic}{}\subsubsection{Parallax P\+I\+N\+G Ultrasonic Sensor}\label{hardware_design_ultrasonic}
+Distance measurement of nearest object within 2-\/3cm accuracy using echo location. The Sonar Ping sensor works as depicted in the following diagram. \hypertarget{hardware_design_serlcd}{}\subsubsection{Ser\+L\+C\+D v2.\+5}\label{hardware_design_serlcd}
+A simple Liquid Crystal Display (L\+CD) which takes incoming 9600bps signal levels and displays characters. The L\+CD accepts A\+S\+C\+II characters for content to display and there are a set of decimal numbers that trigger preprogrammed commands. Settings can be changed from the default and are stored in the onboard E\+E\+P\+R\+OM. The signal line to the input of the L\+CD transmits the data serially, and positioning of the cursor at the write position needs to be explicitly managed for formatting multiple strings to display.  \hypertarget{hardware_design_thermal}{}\subsubsection{8 Pixel Thermal Array Sensor}\label{hardware_design_thermal}
+Thermal sensor can detect human presence based on human body heat signature. The hardware requires a minimum 40ms delay to read correct temperatures after this module has been displaced (due to the robot moving or rotating the Thermopile array individually).  \hypertarget{hardware_design_wifi}{}\subsubsection{Arduino Wi\+Fi Hydrogen (\+D\+I\+Y Sandbox)}\label{hardware_design_wifi}
+Wireless communication to the robot which interfaces between hardware and software U\+A\+RT. ~\newline
+ The L\+E\+Ds are turned on by sending a high voltage signal (bit=1) and low voltage section to turn off an L\+ED.\hypertarget{hardware_design_arduino}{}\subsection{Arduino Card}\label{hardware_design_arduino}
+This is the interface between the microcontroller and the servo motors, L\+E\+Ds, Ultrasonic sensor, and to transmit to the L\+CD. There exist opensource modules that are programmed to manage the stated hardware via the Arduino, the board operates at a period of 62.\+5 nanao seconds which is less than any timely constraints in section 2 (currently in Sprint 1).\hypertarget{hardware_design_stingray_chart}{}\subsubsection{Sting\+Ray Device Connections To Arduino Mega}\label{hardware_design_stingray_chart}
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*3{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Device }&{\bf Arduino Connector }&{\bf A\+T\+Mega Connection  }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Device }&{\bf Arduino Connector }&{\bf A\+T\+Mega Connection  }\\\cline{1-3}
+\endhead
+Details &Details &Details \\\cline{1-3}
+Details &Details &Details \\\cline{1-3}
+Details &Details &Details \\\cline{1-3}
+Servo Motors &&\\\cline{1-3}
+Center Servo Motor &P\+WM 7 &Port H, P\+H4 – O\+C4B, Counter 4 P\+WM Output \\\cline{1-3}
+Right Servo Motor &P\+WM 4 &Port G, P\+G5 – O\+C0B, Counter 0 P\+WM Output \\\cline{1-3}
+Left Servo Motor &P\+WM 2 &Port E, P\+E4 – O\+C3B Counter 3 P\+WM Output \\\cline{1-3}
+Wi-\/\+Fi Hydrogen &&\\\cline{1-3}
+SD Card CS &P\+WM 10 &Port B, P\+B4 – O\+C0A, O\+C1C, P\+C\+I\+N\+T7, Counter 0, Counter 1 P\+WM output pins or P\+C\+I\+N\+T7 \\\cline{1-3}
+SD Card &P\+WM 11 &Port B, P\+B5 – O\+C1B, P\+C\+I\+N\+T6, Counter 1 output pins or P\+C\+I\+N\+T6 \\\cline{1-3}
+SD Card Clk &P\+WM 12 &Port B, P\+B6 – O\+C1A, P\+C\+I\+N\+T5, Counter 2 output pins or P\+C\+I\+N\+T5 \\\cline{1-3}
+L\+ED, blue &P\+WM 3 &Port E, P\+E5, O\+C3C\+: Counter 3 Output (P\+WM) \\\cline{1-3}
+L\+ED, green &P\+WM 5 &Port E, P\+E3, O\+C3A\+: Counter 3 Output (P\+WM) \\\cline{1-3}
+L\+ED, red &P\+WM 6 &Port H, P\+H3, O\+C4A, Counter 4 P\+WM Output \\\cline{1-3}
+Tx2 &Comm 16$\ast$ &Port H, P\+H1, T\+X\+D2\+: U\+S\+A\+R\+T2 Transmit Pin \\\cline{1-3}
+Rx2 &Comm 15 &Port J, P\+J0, R\+X\+D3\+: U\+S\+A\+R\+T3 Receive Pin \\\cline{1-3}
+Sensor and Display&&\\\cline{1-3}
+Sonar Input &Digital I/O 22 &Port A, P\+A0, General purpose I/O \\\cline{1-3}
+Left Encoder Input &Digital I/O 26 &Port A, P\+A4, General purpose I/O \\\cline{1-3}
+Right Encoder Input &Digital I/O 28 &Port A, P\+A6, General purpose I/O \\\cline{1-3}
+L\+CD Display &Serial Tx1, 18 &Port D, P\+D3, T\+X\+D1\+: U\+S\+A\+R\+T1 Transmit Pin \\\cline{1-3}
+I\+C2 Clock Bus &S\+DA 21 &Port D, P\+D0, S\+DA\+: T\+WI Serial Clock \\\cline{1-3}
+I\+C2 Data Bus &S\+DA 20 &Port D, P\+D1, S\+DA\+: T\+WI Serial Data \\\cline{1-3}
+\end{longtabu}
+\hypertarget{hardware_design_avr}{}\subsection{A\+V\+R At\+Mega 2560 Microcontroller}\label{hardware_design_avr}
+Combines 256\+KB I\+SP flash memory, 8\+KB S\+R\+AM, 4\+KB E\+E\+P\+R\+OM, 86 general purpose I/O lines, 32 general purpose working registers, real time counter, six flexible timer/counters with compare modes, P\+WM, 4 U\+S\+A\+R\+Ts, byte oriented 2-\/wire serial interface, 16-\/channel 10-\/bit A/D converter, and a J\+T\+AG interface for on-\/chip debugging. The device achieves a throughput of 16 M\+I\+PS at 16 M\+Hz and operates between 4.\+5-\/5.\+5 volts. By executing instructions in a single clock cycle, the device achieves a throughput approaching 1 M\+I\+PS per M\+Hz. The Ports and U\+S\+A\+RT I\+Ds are visible in the below diagram and are mapped to the hardware each is connected to in the diagram in 3.\+1.\+2.  \hypertarget{hardware_design_servo}{}\subsection{Futaba S148 Servo Standard Precision}\label{hardware_design_servo}
+The motors that will allow Chico to move and rotate 360° on the spot or over some displacement.  Go to \hyperlink{hardware_design}{Top} / \hyperlink{product_release_main_page}{Release Note\+: Main Menu}. \hypertarget{software_design}{}\section{Software Design}\label{software_design}
+\hypertarget{software_design_software_background}{}\subsection{Background Information}\label{software_design_software_background}
+A number of Free\+R\+T\+OS modules along with C\+E\+G4166 R\+TS library shall be used, including the C\+E\+G4166 R\+TS library U\+S\+A\+RT Asynchronous Serial Module for display on the L\+CD display(use the usart\+Serial module provided in the C\+E\+G4166\+\_\+\+R\+T\+S\+\_\+\+L\+I\+B library),the Free\+R\+T\+O\+Slibrary I2C Module for reading data from the thermal sensor. Refer to the related documentation describing the modules. A scheduling approach using a simple loop is applied for scheduling various tasks; performing individual activities such as reading temperature, changing L\+ED color, or displaying output text of L\+CD. This would require analysis of response times to design and develop the scheduler, which shall ensure the proper frequency of update to L\+ED color and L\+CD display.\hypertarget{software_design_detailed_design}{}\subsection{Detailed Design}\label{software_design_detailed_design}
+~\newline
+~\newline
+ Go to \hyperlink{software_design}{Top} / \hyperlink{product_release_main_page}{Release Note\+: Main Menu}. 

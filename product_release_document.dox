@@ -2,89 +2,146 @@
 
 /*#########################################################################################################*/
 
-/*! \page product_release_main_page Release Notes:
+/*! \page product_release_main_page Product Release Document
 Foreword: provide brief description
 
 
 This product release document is divided in the following sections:
-- \subpage introduction "Introduction"
-- \subpage requirements "Requirements"
-- \subpage hardware_design "Hardware Design"
-- \subpage software_design "Software Design"
+- \subpage introduction "1. Introduction"
+- \subpage requirements "2. Requirements"
+- \subpage hardware_design "3. Hardware Design"
+- \subpage software_design "4. Software Design"
 
-For details on source code and related documentation visit respective section.
+For details on source code and related documentation see \ref software_design.
 
 */
 
 /*#########################################################################################################*/
 
 /*! \page introduction Introduction
-Provide introduction, and abstract view of product function, and list of hardware 
+\section purpose Purpose
+Chico the robot is a specialized Sting Ray robot to mimic the behaviour of some Chihuahua canine. Chico has two modes of operation, the first is to follow a person using a heat sensor as best it can and if it cannot continue this action Chico will panic and spin on the spot. Secondly, the command mode allows Chico to receive commands via a web interface that will trigger various behaviour by the robot.
+
+\section scope Scope of Sprints
+The first sprint 1 aims to have Chico the robot act as a temperature monitor for the physical region it is situated without movement. To accomplish this goal Chico will read temperatures, display data in real time on an LCD and indicate ranges of temperatures monitored using different colored LEDS.
+
+\section overview Overview
+The requirements section provides specific constraints for Chico to operate under as it accomplishes its purpose stated in the first introduction sub section. These requirements consist of hardware actions bound to some upper bound time constraint for the action to be completed by.
+\n The design section provides the most detailed hardware description and schematics applied to Chico and the software modules used – includes those from APIs and original authored for this product. The section will be presented in a top-down modular manner decomposing functionality to module of some atomicity of functions.
+\n The references section includes documentation of software APIs, and hardware specifications of components of interest on the StingRay robot. The materials in this section are directly related to the design subsection software and hardware modules.
+
 
 List of hardware:
-	- \ref hw_section_01.
-	- \ref hw_section_02.
+	- \ref stingray.
+	- \ref arduino.
+	- \ref avr.
+	- \ref servo.
 
-Go back to \ref product_release_main_page "Release Note:Main Menu".
+Go back to \ref product_release_main_page "Release Note: Main Menu".
 
 */
 
 /*#########################################################################################################*/
 
 /*! \page requirements Requirements
-Provide details of functional requirements for the sprint.
 
- 	
-Go back to \ref product_release_main_page "Release Note:Main Menu".
+\section flow Flow of Functional Requirements
+The real-time system will accept the input i.e. 9 temperature readings, 1 ambient + 8 pixel temperatures; which are read from thermal array sensor. And, the expected output is changing the color of the LED part of the Hydrogen WiFi shield, to reflect the average temperature and display ambient temperature along with 8 pixels temperatures in form of suitable text string(s) on the LCD.
+
+\section functions Functions
+
+\subsection led LED functionality
+- Turn on Blue LED as average temperature (T) <30 °C, and turn off green, red LEDs.
+- Turn on Green LED as 30 °C <=T <40 °C, and turn off blue, red LEDs.
+- Turn on Blue LED as T =>40 °C, and turn off blue, green LEDs.
+
+\subsection temp Temperature Measuring
+- Read a pixel temperature from registers 2 through 9 of TPA81 Thermopile Array; 8 serial readings.
+-	Read ambient temperature from register 1 after 40ms of the TPA81 Being positioned in the direction of the area to measure ambience; the 40ms delay applies at start up as well even if the sensor is not moved.
+-	Aggregate ambient temperatures as they are read into an average.
+
+\subsection lcd LCD Displaying
+-	Able to display two strings on separate lines of the LCD.
+-	A string that is longer than 80 bytes will be truncated such that only 80 bytes are sent to the LCD.
+-	Display the ambient temperature with the label “Ambient:” on a line of the LCD and the 8 pixel temperatures with the label “8 Pixel” on another line.
+-	The first occurrence of \ref led should occur after 40-45ms to ensure correct readings by TPA81 Thermopile Array; also after the sensor is moved on any axis the LCD should only receive data to display after the 40ms delay.
+
+
+Go back to \ref product_release_main_page "Release Note: Main Menu".
 
 */
 
 /*#########################################################################################################*/
 
-/*! \page hardware_design Hardwre Design
+/*! \page hardware_design Hardware Design
 
 \tableofcontents
 provide brief details for this section.
+\section stingray Stingray Robot
 
-\section hw_section_01 Section 01 
+\subsection ultrasonic Parallax PING Ultrasonic Sensor
+Distance measurement of nearest object within 2-3cm accuracy using echo location.
+\image html images/ultrasonic_1.png "Image: Parallax PING Ultrasonic Sensor"
+The Sonar Ping sensor works as depicted in the following diagram.
+\image html images/ultrasonic_2.png "Image: PING Sensor Diagram"
 
-\image html test_image.png "Image: title"
-To load an image set the parameter IMAGE_PATH to appropriate folder in doxyfile for the project
 
-\subsection hw_subsection_01 Subsction 01
-provide details
-- \ref hw_section_02 Section 02
-- \ref hw_section_03 Section 03
+\subsection serlcd SerLCD v2.5
+A simple Liquid Crystal Display (LCD) which takes incoming 9600bps signal levels and displays characters. The LCD accepts ASCII characters for content to display and there are a set of decimal numbers that trigger preprogrammed commands. Settings can be changed from the default and are stored in the onboard EEPROM. The signal line to the input of the LCD transmits the data serially, and positioning of the cursor at the write position needs to be explicitly managed for formatting multiple strings to display.
+\image html images/serlcd.png "Image: SerLCD Block Diagram"
 
-\subsection hw_subsection_02
-Table
-	|	Column 1				| Column 2 				|			Details																		|
-	|---------------------------|-----------------------|---------------------------------------------------------------------------------------|	 
+\subsection thermal	8 Pixel Thermal Array Sensor
+Thermal sensor can detect human presence based on human body heat signature. The hardware requires a minimum 40ms delay to read correct temperatures after this module has been displaced (due to the robot moving or rotating the Thermopile array individually).
+\image html images/thermal_1.png "Image: Thermal Sensor 1"
+\image html images/thermal_2.png "Image: Thermal Sensor 2"
+
+\subsection wifi Arduino WiFi Hydrogen (DIY Sandbox)
+Wireless communication to the robot which interfaces between hardware and software UART.
+\n The LEDs are turned on by sending a high voltage signal (bit=1) and low voltage section to turn off an LED.
+
+\section arduino Arduino Card
+This is the interface between the microcontroller and the servo motors, LEDs, Ultrasonic sensor,
+and to transmit to the LCD. There exist opensource modules that are programmed to manage the
+stated hardware via the Arduino, the board operates at a period of 62.5 nanao seconds which is
+less than any timely constraints in section 2 (currently in Sprint 1).
+
+\subsection stingray_chart StingRay Device Connections To Arduino Mega
+	|	Device					| Arduino Connector 				|	ATMega Connection										|
+	|---------------------------|-----------------------|---------------------------------------------------------------------------------------|
 	|	Details					| Details				|	Details																				|
 	|	Details					| Details				|	Details																				|
 	|	Details					| Details				|	Details																				|
+	| Servo Motors		| 							| 																							|
+	| Center Servo Motor 	|	PWM 7 |	Port H, PH4 – OC4B, Counter 4 PWM Output	|
+	| Right Servo Motor 	| PWM 4 |	Port G, PG5 – OC0B, Counter 0 PWM Output |
+	| Left Servo Motor		|	PWM 2 |	Port E, PE4 – OC3B Counter 3 PWM Output |
+	| Wi-Fi Hydrogen |	|	|
+	| SD Card CS 	|	PWM 10 	|	Port B, PB4 – OC0A, OC1C, PCINT7, Counter 0, Counter 1 PWM output pins or PCINT7|
+	| SD Card 	|	PWM 11 	|	Port B, PB5 – OC1B, PCINT6, Counter 1 output pins or PCINT6|
+	| SD Card Clk |		PWM 12 	|	Port B, PB6 – OC1A, PCINT5, Counter 2 output pins or PCINT5|
+	| LED, blue |		PWM 3 |		Port E, PE5, OC3C: Counter 3 Output (PWM)|
+	| LED, green |		PWM 5 |		Port E, PE3, OC3A: Counter 3 Output (PWM)|
+	| LED, red 	|	PWM 6 |		Port H, PH3, OC4A, Counter 4 PWM Output|
+	| Tx2 |		Comm 16* 	|	Port H, PH1, TXD2: USART2 Transmit Pin|
+	| Rx2 |		Comm 15 |		Port J, PJ0, RXD3: USART3 Receive Pin|
+	| Sensor and Display|	|	|
+	| Sonar Input |		Digital I/O 22 |		Port A, PA0, General purpose I/O|
+	| Left Encoder Input |		Digital I/O 26 	|	Port A, PA4, General purpose I/O|
+	| Right Encoder Input |		Digital I/O 28 |		Port A, PA6, General purpose I/O|
+	| LCD Display |		Serial Tx1, 18 |		Port D, PD3, TXD1: USART1 Transmit Pin|
+	| IC2 Clock Bus |		SDA 21 |		Port D, PD0, SDA: TWI Serial Clock|
+	| IC2 Data Bus |		SDA 20 |		Port D, PD1, SDA: TWI Serial Data|
 
 
-Go to \ref hardware_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
- 
-\n\n
-\section hw_section_02 Section 02
+\section avr AVR AtMega 2560 Microcontroller
+Combines 256KB ISP flash memory, 8KB SRAM, 4KB EEPROM, 86 general purpose I/O lines, 32 general purpose working registers, real time counter, six flexible timer/counters with compare modes, PWM, 4 USARTs, byte oriented 2-wire serial interface, 16-channel 10-bit A/D converter, and a JTAG interface for on-chip debugging. The device achieves a throughput of 16 MIPS at 16 MHz and operates between 4.5-5.5 volts. By executing instructions in a single clock cycle, the device achieves a throughput approaching 1 MIPS per MHz. The Ports and USART IDs are visible in the below diagram and are mapped to the hardware each is connected to in the diagram in 3.1.2.
+\image html images/avr.png "Image: Block diagram"
 
-\image html test_image.png "Image: title"
-To load an image set the parameter IMAGE_PATH to appropriate folder in doxyfile for the project
+\section servo Futaba S148 Servo Standard Precision
+The motors that will allow Chico to move and rotate 360° on the spot or over some displacement.
+\image html images/servo.png "Image: Servo specifications"
 
-\subsection hw_subsection_04 Subsection 04
-
-
-\n
-Go to \ref hardware_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
-    
-\n \n
-\section hw_section_03 Section 03
-
-\subsection hw_subsection_05 Subsection 05
-
-Go to \ref hardware_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
+Go to \ref hardware_design "Top" / \ref product_release_main_page "Release Note: Main Menu".
 
 
 */
@@ -94,47 +151,15 @@ Go to \ref hardware_design "Top" / \ref product_release_main_page "Release Note:
 /*! \page software_design Software Design
 
 \tableofcontents
-provide brief details for this section.
 
-\section sw_section_01 Section 01 
+\section software_background Background Information
+A number of FreeRTOS modules along with CEG4166 RTS library shall be used, including the CEG4166 RTS library USART Asynchronous Serial Module for display on the LCD display(use the usartSerial module provided in the CEG4166_RTS_LIB library),the FreeRTOSlibrary I2C Module for reading data from the thermal sensor. Refer to the related documentation describing the modules. A scheduling approach using a simple loop is applied for scheduling various tasks; performing individual activities such as reading temperature, changing LED color, or displaying output text of LCD. This would require analysis of response times to design and develop the scheduler, which shall ensure the proper frequency of update to LED color and LCD display.
 
-\image html test_image.png "Image: title"
-To load an image set the parameter IMAGE_PATH to appropriate folder in doxyfile for the project
-
-\subsection sw_subsection_01 Subsction 01
-
-provide details
-- \ref sw_section_02 Section 02
-- \ref sw_section_03 Section 03
-
-\subsection sw_subsection_02
-Table
-	|	Column 1				| Column 2 				|			Details																		|
-	|---------------------------|-----------------------|---------------------------------------------------------------------------------------|	 
-	|	Details					| Details				|	Details																				|
-	|	Details					| Details				|	Details																				|
-	|	Details					| Details				|	Details																				|
+\section detailed_design Detailed Design
 
 
-Go to \ref software_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
- 
 \n\n
-\section sw_section_02 Section 02
 
-\image html test_image.png "Image: title"
-To load an image set the parameter IMAGE_PATH to appropriate folder in doxyfile for the project
+Go to \ref software_design "Top" / \ref product_release_main_page "Release Note: Main Menu".
 
-\subsection sw_subsection_04 Subsection 04
-
-
-\n
-Go to \ref software_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
-
-\n \n
-\section sw_section_03 Section 03
-
-\subsection sw_subsection_05 Subsection 05
-
-Go to \ref software_design "Top" / \ref product_release_main_page "Release Note:Main Menu".
-	
 */
