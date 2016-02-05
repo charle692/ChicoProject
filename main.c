@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include <stdio.h>
 
 #include <avr/io.h>
 
@@ -17,9 +16,9 @@
 #include "queue.h"
 #include "semphr.h"
 /* serial interface include file. */
-#include "usartserial.h"
 #include "ReadTmp.h"
 #include "LCD.h"
+#include "LED.h"
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
 //extern xComPortHandle xSerialPort;
@@ -33,7 +32,7 @@
 int usartfd;
 char lcdString[32];
 uint8_t result[18];
-uint8_t aveTmp;
+uint8_t avgTemperature;
 
 void scheduler(void *para)
 {
@@ -70,10 +69,8 @@ int main(void)
 void vApplicationStackOverflowHook( TaskHandle_t xTask,
                                     portCHAR *pcTaskName )
 {
-
-//	DDRB  |= _BV(DDB7);
-//	PORTB |= _BV(PORTB7);       // main (red PB7) LED on. Mega main LED on and die.
-//	while(1);
+//DDRB  |= _BV(DDB7);
+//PORTB |= _BV(PORTB7);       // main (red PB7) LED on. Mega main LED on and die.
+while(1);
 }
 /*-----------------------------------------------------------*/
-

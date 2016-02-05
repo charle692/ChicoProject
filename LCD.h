@@ -5,21 +5,7 @@
  *      Author: jayhe
  */
 
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
-#include <stdio.h>
-
-#include <avr/io.h>
-
-/* Scheduler include files. */
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-#include "semphr.h"
-/* serial interface include file. */
-#include "usartserial.h"
-
+#include "ReadTmp.h"
 #ifndef LCD_H_
 #define LCD_H_
 

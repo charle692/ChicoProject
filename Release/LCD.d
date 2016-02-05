@@ -1,4 +1,4 @@
-LCD.o LCD.o: ../LCD.c ../LCD.h \
+LCD.o LCD.o: ../LCD.c ../LCD.h ../ReadTmp.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/projdefs.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOSConfig.h \
@@ -17,6 +17,8 @@ LCD.o LCD.o: ../LCD.c ../LCD.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h
 
 ../LCD.h:
+
+../ReadTmp.h:
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h:
 

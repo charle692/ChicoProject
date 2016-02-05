@@ -14,7 +14,7 @@ ReadTmp.o ReadTmp.o: ../ReadTmp.c ../ReadTmp.h \
   /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/include/usartserial.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/portable.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/ringBuffer.h \
-  /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h ../LCD.h
+  /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h
 
 ../ReadTmp.h:
 
@@ -49,5 +49,3 @@ ReadTmp.o ReadTmp.o: ../ReadTmp.c ../ReadTmp.h \
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/ringBuffer.h:
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h:
-
-../LCD.h:
