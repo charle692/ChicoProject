@@ -18,7 +18,6 @@
 /* serial interface include file. */
 #include "ReadTmp.h"
 #include "LCD.h"
-#include "LED.h"
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
 //extern xComPortHandle xSerialPort;
