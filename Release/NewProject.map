@@ -1,0 +1,931 @@
+Archive member included because of file (symbol)
+
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                              ./main.o (I2C_Master_Start_Transceiver_With_Data)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+                              ./main.o (xPortGetFreeHeapSize)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o) (xQueueGenericSend)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o) (vTaskSuspendAll)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (pxPortInitialiseStack)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o) (system_tick)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o) (__system_time)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o) (vListInitialise)
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (xconfigTimerForRunTimeStats)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                              (vfprintf)
+/Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                              ./main.o (usart_print_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (__udivmodsi4)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+                              ./main.o (__prologue_saves__)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o) (__epilogue_restores__)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o (exit)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_tablejump.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o) (__tablejump2__)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                              ./main.o (__do_clear_bss)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+                              /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (strlen_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memcpy.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o) (memcpy)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (memset)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (fputc)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                              /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o) (sprintf)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                              /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (vsnprintf)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                              /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o) (vsnprintf_P)
+/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                              /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+
+Allocating common symbols
+Common symbol       size              file
+
+usartComBuf         0x74              /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+usartfd             0x2               ./main.o
+__system_time       0x4               /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00100000         xr
+data             0x00800200         0x0000fe00         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+LOAD ./main.o
+LOAD /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libm.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a
+LOAD /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a
+LOAD /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a
+LOAD /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x6a52
+ *(.vectors)
+ .vectors       0x00000000       0xe4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table
+                0x000000e4      0x182 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ *(.progmem*)
+ .progmem.data  0x00000266       0x54 ./main.o
+ .progmem.data  0x000002ba        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .progmem.data  0x000002c2       0xfa /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                0x000003bc                . = ALIGN (0x2)
+                0x000003bc                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000003bc        0x0 linker stubs
+ *(.trampolines*)
+                0x000003bc                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ .lowtext       0x000003bc      0x2e8 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ *(.lowtext*)
+                0x000006a4                __ctors_start = .
+ *(.ctors)
+                0x000006a4                __ctors_end = .
+                0x000006a4                __dtors_start = .
+ *(.dtors)
+                0x000006a4                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000006a4        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x000006a4                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000006a4       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000006b4       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x000006b4                __do_copy_data
+ .init4         0x000006d0       0x10 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                0x000006d0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000006e0        0x8 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ *(.init9)
+ *(.text)
+ .text          0x000006e8        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+                0x000006e8                __vector_38
+                0x000006e8                __vector_22
+                0x000006e8                __vector_28
+                0x000006e8                __vector_1
+                0x000006e8                __vector_34
+                0x000006e8                __vector_24
+                0x000006e8                __vector_12
+                0x000006e8                __vector_46
+                0x000006e8                __bad_interrupt
+                0x000006e8                __vector_6
+                0x000006e8                __vector_31
+                0x000006e8                __vector_35
+                0x000006e8                __vector_3
+                0x000006e8                __vector_23
+                0x000006e8                __vector_30
+                0x000006e8                __vector_45
+                0x000006e8                __vector_11
+                0x000006e8                __vector_13
+                0x000006e8                __vector_17
+                0x000006e8                __vector_19
+                0x000006e8                __vector_56
+                0x000006e8                __vector_7
+                0x000006e8                __vector_49
+                0x000006e8                __vector_41
+                0x000006e8                __vector_43
+                0x000006e8                __vector_27
+                0x000006e8                __vector_5
+                0x000006e8                __vector_33
+                0x000006e8                __vector_47
+                0x000006e8                __vector_4
+                0x000006e8                __vector_44
+                0x000006e8                __vector_9
+                0x000006e8                __vector_2
+                0x000006e8                __vector_21
+                0x000006e8                __vector_15
+                0x000006e8                __vector_29
+                0x000006e8                __vector_40
+                0x000006e8                __vector_8
+                0x000006e8                __vector_48
+                0x000006e8                __vector_14
+                0x000006e8                __vector_53
+                0x000006e8                __vector_10
+                0x000006e8                __vector_50
+                0x000006e8                __vector_16
+                0x000006e8                __vector_18
+                0x000006e8                __vector_20
+                0x000006e8                __vector_42
+ .text          0x000006ec        0x0 ./main.o
+ .text          0x000006ec        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .text          0x000006ec        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .text          0x000006ec        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o)
+ .text          0x000006ec        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .text          0x000006ec        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .text          0x000006ec       0x38 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+                0x000006ec                system_tick
+ .text          0x00000724        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .text          0x00000724        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .text          0x00000724        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .text          0x00000724      0x712 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                0x00000724                vfprintf
+ .text          0x00000e36        0x0 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_tablejump.o)
+ .text          0x00000e36        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .text          0x00000e36      0x1b0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                0x00000e36                __ftoa_engine
+ .text          0x00000fe6       0x12 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+                0x00000fe6                strlen_P
+ .text          0x00000ff8       0x16 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                0x00000ff8                strnlen_P
+ .text          0x0000100e       0x12 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memcpy.o)
+                0x0000100e                memcpy
+ .text          0x00001020        0xe /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+                0x00001020                memset
+ .text          0x0000102e       0x16 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+                0x0000102e                strnlen
+ .text          0x00001044       0x58 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                0x00001044                fputc
+ .text          0x0000109c       0x48 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                0x0000109c                sprintf
+ .text          0x000010e4       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                0x000010e4                vsnprintf
+ .text          0x00001138       0x54 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                0x00001138                vsnprintf_P
+ .text          0x0000118c       0xbc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                0x0000118c                __ultoa_invert
+                0x00001248                . = ALIGN (0x2)
+ *(.text.*)
+ .text.TaskReadTemperature
+                0x00001248       0x5e ./main.o
+                0x00001248                TaskReadTemperature
+ .text.main     0x000012a6       0xa0 ./main.o
+                0x000012a6                main
+ .text.I2C_Slave_Start_Transceiver
+                0x00001346       0x1a /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001346                I2C_Slave_Start_Transceiver
+ .text.I2C_Master_Start_Transceiver
+                0x00001360       0x1a /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001360                I2C_Master_Start_Transceiver
+ .text.I2C_Slave_Start_Transceiver_With_Data
+                0x0000137a       0x40 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x0000137a                I2C_Slave_Start_Transceiver_With_Data
+ .text.I2C_Master_Start_Transceiver_With_Data
+                0x000013ba       0x4e /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x000013ba                I2C_Master_Start_Transceiver_With_Data
+ .text.I2C_Slave_Get_Data_From_Transceiver
+                0x00001408       0x48 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001408                I2C_Slave_Get_Data_From_Transceiver
+ .text.I2C_Master_Get_Data_From_Transceiver
+                0x00001450       0x40 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001450                I2C_Master_Get_Data_From_Transceiver
+ .text.I2C_Check_Free_After_Stop
+                0x00001490       0x12 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001490                I2C_Check_Free_After_Stop
+ .text.I2C_Get_State_Info
+                0x000014a2        0xe /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x000014a2                I2C_Get_State_Info
+ .text.__vector_39
+                0x000014b0      0x1b2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x000014b0                __vector_39
+ .text.I2C_Master_Initialise
+                0x00001662       0x60 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00001662                I2C_Master_Initialise
+ .text.I2C_Slave_Initialise
+                0x000016c2       0x50 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x000016c2                I2C_Slave_Initialise
+ .text.hot      0x00001712      0x2f8 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+                0x00001712                xPortGetFreeHeapSize
+                0x00001728                vPortFree
+                0x0000180e                pvPortMalloc
+                0x00001726                vPortInitialiseBlocks
+                0x0000171c                xPortGetMinimumEverFreeHeapSize
+ .text.hot      0x00001a0a      0xc06 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o)
+                0x00001efc                xQueueGenericSendFromISR
+                0x00001a8a                xQueuePeekFromISR
+                0x00001a34                uxQueueGetQueueNumber
+                0x00001a6c                vQueueDelete
+                0x0000200e                xQueueGenericSend
+                0x00001a40                ucQueueGetQueueType
+                0x00001ae4                xQueueReceiveFromISR
+                0x00002534                xQueueGenericCreate
+                0x00001a3a                vQueueSetQueueNumber
+                0x00001a1a                uxQueueSpacesAvailable
+                0x00001a56                xQueueIsQueueFullFromISR
+                0x00001b74                xQueueGenericReceive
+                0x00001a0a                uxQueueMessagesWaiting
+                0x000024a4                xQueueGenericReset
+                0x00001a2e                uxQueueMessagesWaitingFromISR
+                0x00001a46                xQueueIsQueueEmptyFromISR
+                0x000023c2                xQueueCreateMutex
+ .text.hot      0x00002610     0x3098 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x00002d3a                vTaskPlaceOnUnorderedEventList
+                0x000032be                vTaskGetRunTimeStats
+                0x000052c6                vTaskEndScheduler
+                0x00002e18                vTaskPlaceOnEventList
+                0x000052d2                xTaskGenericCreate
+                0x00002856                uxTaskGetStackHighWaterMark
+                0x00002c8c                xTaskResumeFromISR
+                0x0000261c                xTaskGetTickCount
+                0x00002a44                xTaskRemoveFromEventList
+                0x000051fc                vTaskDelete
+                0x0000265a                xTaskCheckForTimeOut
+                0x00002610                vTaskSuspendAll
+                0x00002632                xTaskGetTickCountFromISR
+                0x000028d0                vTaskPriorityDisinherit
+                0x00002934                vTaskPriorityInherit
+                0x000048fe                vTaskResume
+                0x00002ee8                vTaskSwitchContext
+                0x000026ee                vTaskSetTaskNumber
+                0x0000498a                vTaskSuspend
+                0x0000263e                uxTaskGetNumberOfTasks
+                0x00003e0c                vTaskList
+                0x000026e0                uxTaskGetTaskNumber
+                0x00004ebc                vTaskDelayUntil
+                0x00002894                xTaskGetCurrentTaskHandle
+                0x000029d4                xTaskRemoveFromUnorderedEventList
+                0x00003044                xTaskResumeAll
+                0x000054dc                vTaskStartScheduler
+                0x000026d8                vTaskMissedYield
+                0x00002ad6                xTaskIncrementTick
+                0x00004bac                vTaskDelay
+                0x00002644                vTaskSetTimeOutState
+                0x000028a0                uxTaskResetEventItemValue
+ .text.uxTaskGetSystemState
+                0x000056a8      0x102 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x000056a8                uxTaskGetSystemState
+ .text.hot      0x000057aa      0x12a /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x00005840                xPortStartScheduler
+                0x000058d2                vPortEndScheduler
+                0x000057aa                pxPortInitialiseStack
+ .text.vPortYieldFromTick
+                0x000058d4       0xf8 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x000058d4                vPortYieldFromTick
+ .text.__vector_32
+                0x000059cc        0x6 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x000059cc                __vector_32
+ .text.vPortYield
+                0x000059d2       0xc2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+                0x000059d2                vPortYield
+ .text.vListInitialise
+                0x00005a94       0x20 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00005a94                vListInitialise
+ .text.vListInitialiseItem
+                0x00005ab4        0x8 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00005ab4                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00005abc       0x3e /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00005abc                vListInsertEnd
+ .text.vListInsert
+                0x00005afa       0x64 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00005afa                vListInsert
+ .text.uxListRemove
+                0x00005b5e       0x56 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+                0x00005b5e                uxListRemove
+ .text.xconfigTimerForRunTimeStats
+                0x00005bb4       0x18 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+                0x00005bb4                xconfigTimerForRunTimeStats
+ .text.setDefaultUSART
+                0x00005bcc        0x6 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005bcc                setDefaultUSART
+ .text.usartWrite
+                0x00005bd2       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005bd2                usartWrite
+ .text.usartRead
+                0x00005c24       0x5c /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005c24                usartRead
+ .text.usart_xflushRx
+                0x00005c80       0x82 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005c80                usart_xflushRx
+ .text.usart_AvailableCharRx
+                0x00005d02       0x2a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005d02                usart_AvailableCharRx
+ .text.usart_xgetChar
+                0x00005d2c       0x8a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005d2c                usart_xgetChar
+ .text.usart_xputChar
+                0x00005db6      0x116 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005db6                usart_xputChar
+ .text.usartCheckRxComplete
+                0x00005ecc       0x24 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005ecc                usartCheckRxComplete
+ .text.usart_rx_isr
+                0x00005ef0       0xd0 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005ef0                usart_rx_isr
+ .text.__vector_54
+                0x00005fc0       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00005fc0                __vector_54
+ .text.__vector_51
+                0x00006012       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006012                __vector_51
+ .text.__vector_36
+                0x00006064       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006064                __vector_36
+ .text.__vector_25
+                0x000060b6       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000060b6                __vector_25
+ .text.usart_tx_isr
+                0x00006108       0xb6 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006108                usart_tx_isr
+ .text.__vector_55
+                0x000061be       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000061be                __vector_55
+ .text.__vector_52
+                0x00006210       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006210                __vector_52
+ .text.__vector_37
+                0x00006262       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006262                __vector_37
+ .text.__vector_26
+                0x000062b4       0x52 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000062b4                __vector_26
+ .text.usart_xfprint_P
+                0x00006306       0x48 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006306                usart_xfprint_P
+ .text.usart_xprint_P
+                0x0000634e        0xc /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000634e                usart_xprint_P
+ .text.usart_fprint_P
+                0x0000635a       0x8a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x0000635a                usart_fprint_P
+ .text.usart_print_P
+                0x000063e4        0xc /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000063e4                usart_print_P
+ .text.usart_xfprint
+                0x000063f0       0x50 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000063f0                usart_xfprint
+ .text.usart_xfprintf_P_arg
+                0x00006440       0x7a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006440                usart_xfprintf_P_arg
+ .text.usart_xfprintf_arg
+                0x000064ba       0x7a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000064ba                usart_xfprintf_arg
+ .text.usart_xprint
+                0x00006534        0xc /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006534                usart_xprint
+ .text.usart_fprint
+                0x00006540       0x84 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006540                usart_fprint
+ .text.usart_fprintf_P_arg
+                0x000065c4       0x5c /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000065c4                usart_fprintf_P_arg
+ .text.usart_fprintf_arg
+                0x00006620       0x58 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006620                usart_fprintf_arg
+ .text.usart_print
+                0x00006678        0xc /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006678                usart_print
+ .text.usart_xfprintf_P
+                0x00006684       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006684                usart_xfprintf_P
+ .text.usart_xfprintf
+                0x000066a4       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000066a4                usart_xfprintf
+ .text.usart_xprintf_P
+                0x000066c4       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000066c4                usart_xprintf_P
+ .text.usart_xprintf
+                0x000066e4       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x000066e4                usart_xprintf
+ .text.usart_fprintf_P
+                0x00006704       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006704                usart_fprintf_P
+ .text.usart_fprintf
+                0x00006724       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006724                usart_fprintf
+ .text.usart_printf_P
+                0x00006744       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006744                usart_printf_P
+ .text.usart_printf
+                0x00006764       0x20 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006764                usart_printf
+ .text.usartClose
+                0x00006784       0x82 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006784                usartClose
+ .text.usartOpen
+                0x00006806      0x18a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00006806                usartOpen
+ .text.libgcc   0x00006990       0x44 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+                0x00006990                __udivmodsi4
+ .text.libgcc   0x000069d4       0x38 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+                0x000069d4                __prologue_saves__
+ .text.libgcc   0x00006a0c       0x36 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+                0x00006a0c                __epilogue_restores__
+ .text.libgcc   0x00006a42        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .text.libgcc   0x00006a42        0xc /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_tablejump.o)
+                0x00006a46                __tablejump__
+                0x00006a42                __tablejump2__
+ .text.libgcc   0x00006a4e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+                0x00006a4e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00006a4e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+                0x00006a4e                exit
+                0x00006a4e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00006a4e        0x4 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ *(.fini0)
+                0x00006a52                _etext = .
+
+.data           0x00800200       0x6e load address 0x00006a52
+                0x00800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800200        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .data          0x00800200        0x9 ./main.o
+ .data          0x00800209        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .data          0x00800209        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data          0x00800209        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o)
+ .data          0x00800209       0x35 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .data          0x0080023e        0x0 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_tablejump.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memcpy.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ .data          0x0080023e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ *(.data*)
+ .data.I2C_state
+                0x0080023e        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .data.xMinimumEverFreeBytesRemaining
+                0x0080023f        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data.xFreeBytesRemaining
+                0x00800241        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .data.xNextTaskUnblockTime
+                0x00800243        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .data.usartReg
+                0x00800245       0x28 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00800245                usartReg
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080026e                . = ALIGN (0x2)
+ *fill*         0x0080026d        0x1 00
+                0x0080026e                _edata = .
+                0x0080026e                PROVIDE (__data_end, .)
+
+.bss            0x0080026e     0x130f
+                0x0080026e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/crtm2560.o
+ .bss           0x0080026e        0x0 ./main.o
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(queue.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_tick.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(list.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(runtTimeStatsTimer.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x0080026e        0x0 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_udivmodsi4.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_prologue.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_epilogue.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_exit.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_tablejump.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/avr6/libgcc.a(_clear_bss.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strlen_P.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memcpy.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(memset.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(strnlen.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ .bss           0x0080026e        0x0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ *(.bss*)
+ .bss.xI2CSemaphore
+                0x0080026e        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x0080026e                xI2CSemaphore
+ .bss.I2C_statusReg
+                0x00800270        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+                0x00800270                I2C_statusReg
+ .bss.I2C_checkBusyAfterStop
+                0x00800271        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .bss.I2C_bufPtr.1864
+                0x00800272        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .bss.I2C_buf   0x00800273       0x18 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .bss.I2C_msgSize
+                0x0080028b        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(i2cMultiMaster.o)
+ .bss.xBlockAllocatedBit
+                0x0080028c        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.pxEnd     0x0080028e        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.ucHeap    0x00800290     0x1200 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.xStart    0x00801490        0x4 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(heap_4.o)
+ .bss.pxCurrentTCB
+                0x00801494        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+                0x00801494                pxCurrentTCB
+ .bss.uxCurrentNumberOfTasks
+                0x00801496        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTopReadyPriority
+                0x00801497        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xYieldPending
+                0x00801498        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xTickCount
+                0x00801499        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xNumOfOverflows
+                0x0080149b        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxSchedulerSuspended
+                0x0080149c        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.ulTotalRunTime
+                0x0080149d        0x4 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.ulTaskSwitchedInTime
+                0x008014a1        0x4 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxPendedTicks
+                0x008014a5        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xSchedulerRunning
+                0x008014a6        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTasksDeleted
+                0x008014a7        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.uxTaskNumber
+                0x008014a8        0x1 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxReadyTasksLists
+                0x008014a9       0x24 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xDelayedTaskList1
+                0x008014cd        0x9 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xDelayedTaskList2
+                0x008014d6        0x9 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxDelayedTaskList
+                0x008014df        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.pxOverflowDelayedTaskList
+                0x008014e1        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xPendingReadyList
+                0x008014e3        0x9 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xTasksWaitingTermination
+                0x008014ec        0x9 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.xSuspendedTaskList
+                0x008014f5        0x9 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(tasks.o)
+ .bss.portTickRateHz
+                0x008014fe        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss.ticksRemainingInSec
+                0x00801500        0x2 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(port.o)
+ .bss.defaultUSART
+                0x00801502        0x1 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00801502                defaultUSART
+ *(COMMON)
+ COMMON         0x00801503        0x2 ./main.o
+                0x00801503                usartfd
+ COMMON         0x00801505        0x4 /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a(system_time.o)
+                0x00801505                __system_time
+ COMMON         0x00801509       0x74 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a(usartSerial.o)
+                0x00801509                usartComBuf
+                0x0080157d                PROVIDE (__bss_end, .)
+                0x00006a52                __data_load_start = LOADADDR (.data)
+                0x00006ac0                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0080157d        0x0
+                0x0080157d                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x0080157d                PROVIDE (__noinit_end, .)
+                0x0080157d                _end = .
+                0x0080157d                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_aranges
+                0x00000020       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_aranges
+                0x00000040       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_aranges
+                0x00000060       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_aranges
+                0x00000080       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_pubnames
+                0x00000000       0x9b
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_pubnames
+                0x0000001f       0x1c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_pubnames
+                0x0000003b       0x1e /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_pubnames
+                0x00000059       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_pubnames
+                0x00000079       0x22 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_info     0x00000000      0xad9
+ *(.debug_info)
+ .debug_info    0x00000000      0x41d /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_info    0x0000041d      0x166 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_info    0x00000583      0x1b0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_info    0x00000733      0x1d3 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_info    0x00000906      0x1d3 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x54a
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x18f /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_abbrev  0x0000018f       0xd9 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_abbrev  0x00000268      0x10c /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_abbrev  0x00000374       0xeb /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_abbrev  0x0000045f       0xeb /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_line     0x00000000      0xbad
+ *(.debug_line)
+ .debug_line    0x00000000      0x740 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_line    0x00000740       0xd0 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_line    0x00000810      0x125 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_line    0x00000935      0x13b /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_line    0x00000a70      0x13d /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_frame    0x00000000       0xa0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_frame   0x00000020       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_frame   0x00000040       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_frame   0x00000060       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_frame   0x00000080       0x20 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_str      0x00000000      0x21a
+ *(.debug_str)
+ .debug_str     0x00000000      0x17a /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                                0x1bb (size before relaxing)
+ .debug_str     0x0000017a       0x22 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+                                0x125 (size before relaxing)
+ .debug_str     0x0000019c       0x26 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+                                0x14b (size before relaxing)
+ .debug_str     0x000001c2       0x2a /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+                                0x156 (size before relaxing)
+ .debug_str     0x000001ec       0x2e /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+                                0x15a (size before relaxing)
+
+.debug_loc      0x00000000      0xb0f
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x9ab /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .debug_loc     0x000009ab       0x60 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(fputc.o)
+ .debug_loc     0x00000a0b       0x24 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(sprintf.o)
+ .debug_loc     0x00000a2f       0x70 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf.o)
+ .debug_loc     0x00000a9f       0x70 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libc.a(vsnprintf_p.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(NewProject.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x18
+ .debug_ranges  0x00000000       0x18 /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
