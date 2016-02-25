@@ -10,6 +10,8 @@ void lcdPrint(uint8_t i)
 {
 	int usartfd = usartOpen( USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	char str[2];
+	float rightAverage;
+	float leftAverage;
 
 	usartWrite(USART1_ID,254); //command mode
 	usartWrite(USART1_ID,1); //clears LCD
@@ -18,16 +20,24 @@ void lcdPrint(uint8_t i)
 	sprintf(str,"A:");
 	sprintf(str + strlen(str), "%d", result[1]);
 	sprintf(str + strlen(str), " ");
-
 	usart_fprint(USART1_ID,str);
 
-	sprintf(str,"8:");
-	for(int i=3;i<18;i=i+2)
-	{
-		if(i!=3)sprintf(str + strlen(str), ",%d", result[i]);
-		else
-			sprintf(str + strlen(str), "%d", result[i]);
+	for(int i=3;i<18;i=i+2) {
+		if(i<=9) {
+			rightAverage += result[i];
+		} else {
+			leftAverage += result[i];
+		}
 	}
+
+	sprintf(str, "AR:");
+	sprintf(str + strlen(str), "%d", rightAverage/4);
+	sprintf(str + strlen(str), " ");
+	usart_fprint(USART1_ID,str);
+
+	sprintf(str, "AL:");
+	sprintf(str + strlen(str), "%d", leftAverage/4);
+	sprintf(str + strlen(str), " ");
 	usart_fprint(USART1_ID,str);
 }
 

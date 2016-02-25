@@ -18,6 +18,8 @@
 /* serial interface include file. */
 #include "ReadTmp.h"
 #include "LCD.h"
+#include "LED.h"
+
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
 //extern xComPortHandle xSerialPort;
@@ -38,11 +40,11 @@ void scheduler(void *para)
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 
-	while(1)
-	{
-	TaskReadTemperature(0);
-	vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
-	lcdPrint(0);
+	while(1) {
+		TaskReadTemperature(0);
+		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
+		lcdPrint(0);
+		changeLED(0);
 	}
 }
 
