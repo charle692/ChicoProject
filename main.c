@@ -34,6 +34,9 @@ int usartfd;
 char lcdString[32];
 uint8_t result[18];
 uint8_t avgTemperature;
+_Bool movingForwards;
+_Bool movingBackwards;
+_Bool spinning;
 
 void scheduler(void *para)
 {
