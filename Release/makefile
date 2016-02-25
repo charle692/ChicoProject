@@ -12,6 +12,9 @@ RM := rm -rf
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
 ifneq ($(strip $(ASM_DEPS)),)
 -include $(ASM_DEPS)
 endif
@@ -20,9 +23,6 @@ ifneq ($(strip $(S_DEPS)),)
 endif
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
-endif
-ifneq ($(strip $(C_DEPS)),)
--include $(C_DEPS)
 endif
 endif
 
@@ -46,14 +46,14 @@ sizedummy \
 all: ProjectTemplate.elf secondary-outputs
 
 dependents:
-	-cd /Users/ryanoconnor/Documents/Arduino\ shit/FreeRTOS801/Release && $(MAKE) all
-	-cd /Users/ryanoconnor/Documents/Arduino\ shit/CEG4166_RTS_Lib/Release && $(MAKE) all
+	-cd /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release && $(MAKE) all
+	-cd /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release && $(MAKE) all
 
 # Tool invocations
-ProjectTemplate.elf: $(OBJS) $(USER_OBJS) /Users/ryanoconnor/Documents/Arduino\ shit/FreeRTOS801/Release/libFreeRTOS801.a /Users/ryanoconnor/Documents/Arduino\ shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a
+ProjectTemplate.elf: $(OBJS) $(USER_OBJS) /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,ProjectTemplate.map --gc-sections -Wl,-u,vfprintf -Wl -L"/Users/ryanoconnor/Documents/Arduino shit/FreeRTOS801/Release" -L"/Users/ryanoconnor/Documents/Arduino shit/CEG4166_RTS_Lib/Release" -mmcu=atmega2560 -o "ProjectTemplate.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,ProjectTemplate.map --gc-sections -Wl,-u,vfprintf -Wl -L"/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release" -L"/Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release" -mmcu=atmega2560 -o "ProjectTemplate.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -83,14 +83,14 @@ sizedummy: ProjectTemplate.elf
 
 # Other Targets
 clean:
-	-$(RM) $(FLASH_IMAGE)$(ELFS)$(OBJS)$(ASM_DEPS)$(EEPROM_IMAGE)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(LSS)$(C_DEPS) ProjectTemplate.elf
+	-$(RM) $(OBJS)$(C_DEPS)$(ASM_DEPS)$(EEPROM_IMAGE)$(FLASH_IMAGE)$(ELFS)$(LSS)$(S_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS) ProjectTemplate.elf
 	-@echo ' '
 
 secondary-outputs: $(LSS) $(FLASH_IMAGE) $(EEPROM_IMAGE) $(SIZEDUMMY)
 
 .PHONY: all clean dependents
 .SECONDARY:
-/Users/ryanoconnor/Documents/Arduino\ shit/FreeRTOS801/Release/libFreeRTOS801.a:
-/Users/ryanoconnor/Documents/Arduino\ shit/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a:
+/Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a:
+/Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a:
 
 -include ../makefile.targets

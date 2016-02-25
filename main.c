@@ -19,6 +19,7 @@
 #include "ReadTmp.h"
 #include "LCD.h"
 #include "LED.h"
+#include "Movement.h"
 
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
@@ -48,6 +49,7 @@ void scheduler(void *para)
 		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
 		lcdPrint(0);
 		changeLED(0);
+		move();
 	}
 }
 
