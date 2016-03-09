@@ -1,4 +1,4 @@
-ReadTmp.o ReadTmp.o: ../ReadTmp.c ../ReadTmp.h \
+Scan.o Scan.o: ../Scan.c ../Scan.h ../motion.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/projdefs.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOSConfig.h \
@@ -12,7 +12,9 @@ ReadTmp.o ReadTmp.o: ../ReadTmp.c ../ReadTmp.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/semphr.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/queue.h
 
-../ReadTmp.h:
+../Scan.h:
+
+../motion.h:
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h:
 

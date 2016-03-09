@@ -8,6 +8,7 @@ C_SRCS += \
 ../LED.c \
 ../Movement.c \
 ../ReadTmp.c \
+../Scan.c \
 ../main.c \
 ../motion.c 
 
@@ -16,6 +17,7 @@ OBJS += \
 ./LED.o \
 ./Movement.o \
 ./ReadTmp.o \
+./Scan.o \
 ./main.o \
 ./motion.o 
 
@@ -24,6 +26,7 @@ C_DEPS += \
 ./LED.d \
 ./Movement.d \
 ./ReadTmp.d \
+./Scan.d \
 ./main.d \
 ./motion.d 
 

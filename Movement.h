@@ -1,15 +1,26 @@
 /*
  * Movement.h
  *
- *  Created on: Feb 24, 2016
+ *  Created on: Mar 9, 2016
  *      Author: jayhe
  */
 #include "motion.h"
+#include "LED.h"
+// AVR includes
+#include <avr/io.h>
+
+/* Scheduler include files. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 
 #ifndef MOVEMENT_H_
 #define MOVEMENT_H_
 
-void move();
-
+void robotForward();
+void robotBackwards();
+void robotLeftRight();
+void robotStop();
 
 #endif /* MOVEMENT_H_ */

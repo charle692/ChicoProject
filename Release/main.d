@@ -11,11 +11,12 @@ main.o main.o: ../main.c \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/queue.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/semphr.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/queue.h ../ReadTmp.h \
+  ../LCD.h \
   /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/include/usartserial.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/portable.h \
   /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/ringBuffer.h \
-  /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h ../LCD.h \
-  ../LED.h ../Movement.h ../motion.h
+  /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h ../Scan.h \
+  ../motion.h ../Movement.h ../LED.h
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h:
 
@@ -43,6 +44,8 @@ main.o main.o: ../main.c \
 
 ../ReadTmp.h:
 
+../LCD.h:
+
 /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/include/usartserial.h:
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/portable.h:
@@ -51,10 +54,10 @@ main.o main.o: ../main.c \
 
 /Users/jayhe/Documents/CEG4166/FreeRTOS801/include/FreeRTOS.h:
 
-../LCD.h:
+../Scan.h:
 
-../LED.h:
+../motion.h:
 
 ../Movement.h:
 
-../motion.h:
+../LED.h:
