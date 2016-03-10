@@ -8,36 +8,51 @@
 
 void lcdPrint(uint8_t i)
 {
-	int usartfd = usartOpen( USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
-	char str[2];
-	float rightAverage;
-	float leftAverage;
+	int usartfd = usartOpen( USART0_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 
-	usartWrite(USART1_ID,254); //command mode
-	usartWrite(USART1_ID,1); //clears LCD
-	extern uint8_t result[18];
 
-	sprintf(str,"A:");
-	sprintf(str + strlen(str), "%d", result[1]);
-	sprintf(str + strlen(str), " ");
-	usart_fprint(USART1_ID,str);
-
-	for(int i=3;i<18;i=i+2) {
-		if(i<=9) {
-			rightAverage += result[i];
-		} else {
-			leftAverage += result[i];
-		}
-	}
-
-	sprintf(str, "AR:");
-	sprintf(str + strlen(str), "%d", rightAverage/4);
-	sprintf(str + strlen(str), " ");
-	usart_fprint(USART1_ID,str);
-
-	sprintf(str, "AL:");
-	sprintf(str + strlen(str), "%d", leftAverage/4);
-	sprintf(str + strlen(str), " ");
-	usart_fprint(USART1_ID,str);
+//	char str[2];
+//	uint8_t rightAverage;
+//	uint8_t leftAverage;
+//
+//	usartWrite(USART1_ID,254); //command mode
+//	usartWrite(USART1_ID,1); //clears LCD
+//	extern uint8_t result[18];
+	extern uint8_t distance;
+	usart_printf_P(PSTR("Distance: %d"), distance);
+//	extern uint8_t speed;
+//
+//	for(int i=3;i<18;i=i+2) {
+//		if(i<=9) {
+//			rightAverage += result[i];
+//		} else {
+//			leftAverage += result[i];
+//		}
+//	}
+//
+//	sprintf(str, "T:");
+//	sprintf(str + strlen(str), "%d", speed);
+//	sprintf(str + strlen(str), " ");
+//	usart_fprint(USART1_ID,str);
+//
+//	sprintf(str, "D:");
+//	sprintf(str + strlen(str), "%d", distance);
+//	sprintf(str + strlen(str), " ");
+//	usart_fprint(USART1_ID,str);
+//
+//	sprintf(str,"A:");
+//	sprintf(str + strlen(str), "%d", result[1]);
+//	sprintf(str + strlen(str), " ");
+//	usart_fprint(USART1_ID,str);
+//
+//	sprintf(str, "AR:");
+//	sprintf(str + strlen(str), "%d", rightAverage/4);
+//	sprintf(str + strlen(str), " ");
+//	usart_fprint(USART1_ID,str);
+//
+//	sprintf(str, "AL:");
+//	sprintf(str + strlen(str), "%d", leftAverage/4);
+//	sprintf(str + strlen(str), " ");
+//	usart_fprint(USART1_ID,str);
 }
 

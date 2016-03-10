@@ -36,9 +36,10 @@ int usartfd;
 char lcdString[32];
 uint8_t result[18];
 uint8_t avgTemperature;
-_Bool movingForwards;
-_Bool movingBackwards;
-_Bool spinning;
+uint8_t speed;
+uint8_t* ticCount;
+double distance;
+int counter;
 
 void scheduler(void *para)
 {
@@ -48,11 +49,14 @@ void scheduler(void *para)
 	while(1) {
 		TaskReadTemperature(0);
 		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
+		distanceAndSpeed();
 		lcdPrint(0);
-		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 
 	}
 }
+
+
 
 void moveRobot(void *para)
 {
@@ -69,10 +73,10 @@ void moveRobot(void *para)
 		robotRight();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotSteady();
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
+		speed=0;
+		vTaskDelayUntil( &xLastWakeTime, ( 3000 / portTICK_PERIOD_MS ) );
 	}
 }
-
 int main(void)
 {
 	// turn on the serial port for debugging or for other USART reasons.
@@ -99,6 +103,7 @@ int main(void)
 			NULL,
 			3,
 			NULL);
+
 
 	I2C_Master_Initialise(0xC0);
 	vTaskStartScheduler();

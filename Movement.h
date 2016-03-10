@@ -5,6 +5,7 @@
  *      Author: jayhe
  */
 #include "motion.h"
+
 #include "LED.h"
 // AVR includes
 #include <avr/io.h>
@@ -22,5 +23,6 @@ void robotForward();
 void robotBackwards();
 void robotLeftRight();
 void robotStop();
+void distanceAndSpeed();
 
 #endif /* MOVEMENT_H_ */
