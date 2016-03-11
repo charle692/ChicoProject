@@ -36,9 +36,10 @@ int usartfd;
 char lcdString[32];
 uint8_t result[18];
 uint8_t avgTemperature;
-uint8_t speed;
+uint8_t speedDisplay;
 uint8_t* ticCount;
-double distance;
+bool rest;
+uint16_t distanceDisplay;
 int counter;
 
 void scheduler(void *para)
@@ -52,7 +53,6 @@ void scheduler(void *para)
 		distanceAndSpeed();
 		lcdPrint(0);
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-
 	}
 }
 
@@ -73,10 +73,10 @@ void moveRobot(void *para)
 		robotRight();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotSteady();
-		speed=0;
-		vTaskDelayUntil( &xLastWakeTime, ( 3000 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
 	}
 }
+
 int main(void)
 {
 	// turn on the serial port for debugging or for other USART reasons.

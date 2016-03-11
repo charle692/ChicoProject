@@ -57,36 +57,51 @@ void robotRight()
 
 void robotSteady()
 {
-	extern uint8_t speed;
+	//extern uint8_t speedDisplay;
 	changeLED(0);
 	motion_servo_stop(MOTION_WHEEL_RIGHT);
 	//motion_servo_set_pulse_width(MOTION_WHEEL_RIGHT, 2785);
 	motion_servo_stop(MOTION_WHEEL_LEFT);
 	//motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, 2785);
-	speed=0;
+	//speedDisplay = 0;
 }
+
+//static uint16_t distance = 0;
+//static uint8_t speed;
 
 void distanceAndSpeed()
 {
 extern uint8_t* ticCount;
-extern double distance;
-extern uint8_t speed;
+extern uint16_t distanceDisplay;
+extern uint8_t speedDisplay;
 double modifier = (configCPU_CLOCK_HZ / (double) 10000) *1.25;
 extern int counter;
 
-if(motion_enc_read(MOTION_WHEEL_RIGHT, ticCount) == 1)
+if(motion_enc_read(MOTION_WHEEL_RIGHT, ticCount) == 0)
 {
-	counter++;
-	distance = counter*0.54;
-	speed = 0.54 / (*ticCount / modifier);
+	speedDisplay =0;
 }
 
-if(motion_enc_read(MOTION_WHEEL_LEFT, ticCount) == 1)
+else if(motion_enc_read(MOTION_WHEEL_RIGHT, ticCount) == 1)
 {
 	counter++;
-	distance = counter*0.54;
-	speed = 0.54 / (*ticCount / modifier);
+	distanceDisplay = counter*0.54;
+	speedDisplay = 0.54 / (*ticCount/modifier);
+	//distanceDisplay = distance;
+	//speedDisplay = speed;
 }
+
+else if(motion_enc_read(MOTION_WHEEL_LEFT, ticCount) == 1)
+{
+
+	counter++;
+	distanceDisplay = counter*0.54;
+	speedDisplay = 0.54 / (*ticCount/modifier);
+	//distanceDisplay = distance;
+	//speedDisplay = speed;
+}
+
+
 }
 
 
