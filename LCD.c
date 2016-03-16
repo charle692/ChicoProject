@@ -10,13 +10,17 @@ void lcdPrint(uint8_t i)
 {
 	int usartfd = usartOpen(USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 
-
 	char str[2];
 	uint8_t rightAverage;
 	uint8_t leftAverage;
 
+
 	usartWrite(USART1_ID,254); //command mode
-	usartWrite(USART1_ID,1); //clears LCD
+	usartWrite(USART1_ID,1);//clear lcd
+
+	//first line
+	usartWrite(USART1_ID,254);
+	usartWrite(USART1_ID,128);
 	extern uint8_t result[18];
 	extern uint8_t distanceDisplay;
 	//usart_printf_P(PSTR("Distance: %d"), distance);
@@ -30,15 +34,18 @@ void lcdPrint(uint8_t i)
 		}
 	}
 
-	sprintf(str, "T:");
+	sprintf(str, "S:");
 	sprintf(str + strlen(str), "%" PRIu8, speedDisplay);
 	sprintf(str + strlen(str), " ");
 	usart_fprint(USART1_ID,str);
 
 	sprintf(str, "D:");
 	sprintf(str + strlen(str), "%" PRIu16, distanceDisplay);
-	sprintf(str + strlen(str), " ");
 	usart_fprint(USART1_ID,str);
+
+	//second line
+	usartWrite(USART1_ID,254);
+	usartWrite(USART1_ID,192); //command mode
 
 	sprintf(str,"A:");
 	sprintf(str + strlen(str), "%d", result[1]);
@@ -52,7 +59,6 @@ void lcdPrint(uint8_t i)
 
 	sprintf(str, "AL:");
 	sprintf(str + strlen(str), "%d", leftAverage/4);
-	sprintf(str + strlen(str), " ");
 	usart_fprint(USART1_ID,str);
 }
 

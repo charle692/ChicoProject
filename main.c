@@ -38,8 +38,8 @@ uint8_t result[18];
 uint8_t avgTemperature;
 uint8_t speedDisplay;
 uint8_t* ticCount;
-bool rest;
 uint16_t distanceDisplay;
+bool rest;
 int counter;
 
 void scheduler(void *para)
@@ -50,9 +50,8 @@ void scheduler(void *para)
 	while(1) {
 		TaskReadTemperature(0);
 		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
-		distanceAndSpeed();
 		lcdPrint(0);
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 400 / portTICK_PERIOD_MS ) );
 	}
 }
 
@@ -65,14 +64,19 @@ void moveRobot(void *para)
 	while(1)
 	{
 		robotForward();
+		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotLeft();
+		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotBackwards();
+		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotRight();
+		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
 		robotSteady();
+		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
 	}
 }

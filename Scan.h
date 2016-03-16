@@ -6,7 +6,7 @@
  */
 
 #include "motion.h"
-
+#include <stdbool.h>
 // AVR includes
 #include <avr/io.h>
 

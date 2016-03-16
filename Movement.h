@@ -9,7 +9,7 @@
 #include "LED.h"
 // AVR includes
 #include <avr/io.h>
-
+#include <stdbool.h>
 /* Scheduler include files. */
 #include "FreeRTOS.h"
 #include "task.h"

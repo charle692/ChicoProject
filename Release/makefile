@@ -46,8 +46,8 @@ sizedummy \
 all: ProjectTemplate.elf secondary-outputs
 
 dependents:
-	-cd /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release && $(MAKE) all
-	-cd /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release && $(MAKE) all
+	-cd /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release && $(MAKE) clean all
+	-cd /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release && $(MAKE) clean all
 
 # Tool invocations
 ProjectTemplate.elf: $(OBJS) $(USER_OBJS) /Users/jayhe/Documents/CEG4166/FreeRTOS801/Release/libFreeRTOS801.a /Users/jayhe/Documents/CEG4166/CEG4166_RTS_Lib/Release/libCEG4166_RTS_Lib.a

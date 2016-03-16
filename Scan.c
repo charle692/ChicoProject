@@ -9,6 +9,7 @@
 void move()
 {
 	motion_init();
+	extern bool rest;
 	uint16_t center = 2785;
 	uint16_t count = 2;
 
@@ -18,7 +19,12 @@ void move()
 	motion_servo_start(MOTION_SERVO_CENTER);
 	while(1)
 	{
-		motion_servo_start(MOTION_SERVO_CENTER);
+		if(rest)
+		{
+			motion_servo_set_pulse_width(MOTION_SERVO_CENTER,2785);
+			vTaskDelayUntil( &xLastWakeTime, ( 25 / portTICK_PERIOD_MS ) );
+		}else
+		{
 		motion_servo_set_pulse_width(MOTION_SERVO_CENTER,center);
 
 		if(center == 2785) vTaskDelayUntil( &xLastWakeTime, ( 25 / portTICK_PERIOD_MS ) );
@@ -31,7 +37,7 @@ void move()
 
 		motion_servo_set_pulse_width(MOTION_SERVO_CENTER,center+=count);
 		vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
-
+		}
 	}
 }
 
