@@ -21,6 +21,7 @@
 //#include "LED.h"
 #include "Scan.h"
 #include "Movement.h"
+#include "wireless_interface.h"
 
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
@@ -61,52 +62,81 @@ void moveRobot(void *para)
 {
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
+	char client_request;
 	while(1)
 	{
-		robotForward();
+//		robotForward();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-		robotLeft();
+//		robotLeft();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-		robotBackwards();
+//		robotBackwards();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-		robotRight();
+//		robotRight();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-		robotSteady();
+//		robotSteady();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
 	}
 }
 
+void processRequests(void *para) {
+	TickType_t xLastWakeTime;
+	xLastWakeTime = xTaskGetTickCount();
+
+	char client_request;
+	while(1) {
+		process_client_request();
+		client_request = get_next_client_response();
+		vTaskDelayUntil( &xLastWakeTime, (5500 / portTICK_PERIOD_MS ));
+	}
+}
+
 int main(void)
 {
+	portENABLE_INTERRUPTS();
 	// turn on the serial port for debugging or for other USART reasons.
-	usartfd = usartOpen( USART0_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
+	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
+	usartOpen( USART2_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
+	usartOpen( USART0_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
+	gs_initialize_module(USART2_ID, 9600, USART0_ID, 115200);
+	gs_set_wireless_ssid("🤖");
+	gs_activate_wireless_connection();
 
-	xTaskCreate(
-			scheduler,
-			(0)
-			,  256				// Tested 9 free @ 208
-			,  NULL
-			,  3
-			,  NULL );
+	configure_web_page("Chico: The Robot", "! Control Interface !", HTML_DROPDOWN_LIST);
+	add_element_choice('F', "Forward");
+	start_web_server();
 
-	xTaskCreate(move,
-			(0),
-			256,
-			NULL,
-			3,
-			NULL);
-
-	xTaskCreate(moveRobot,
-			(0),
-			256,
-			NULL,
-			3,
-			NULL);
+	xTaskCreate(processRequests,
+					(0),
+					1024,
+					NULL,
+					3,
+					NULL);
+//	xTaskCreate(
+//			scheduler,
+//			(0)
+//			,  256				// Tested 9 free @ 208
+//			,  NULL
+//			,  3
+//			,  NULL );
+//
+//	xTaskCreate(move,
+//			(0),
+//			256,
+//			NULL,
+//			3,
+//			NULL);
+//
+//	xTaskCreate(moveRobot,
+//			(0),
+//			256,
+//			NULL,
+//			3,
+//			NULL);
 
 
 	I2C_Master_Initialise(0xC0);
