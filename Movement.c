@@ -8,7 +8,7 @@
 
 #include "usartserial.h"
 
-void robotForward()
+void robotBackward()
 {
 	int right = 3000;
 	int left = 2000;
@@ -21,7 +21,7 @@ void robotForward()
 	motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, left);
 }
 
-void robotBackwards()
+void robotForward()
 {
 	int right = 2000;
 	int left = 3000;

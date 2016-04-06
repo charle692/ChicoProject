@@ -42,6 +42,7 @@ uint8_t* ticCount;
 uint16_t distanceDisplay;
 bool rest;
 int counter;
+char clientRequest;
 
 void scheduler(void *para)
 {
@@ -62,35 +63,39 @@ void moveRobot(void *para)
 {
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-	char client_request;
 	while(1)
 	{
-		robotForward();
+		switch(clientRequest) {
+		case'W':
+			robotForward();
+			break;
+		case'S':
+			robotBackward();
+			break;
+		case'A':
+			robotLeft();
+			break;
+		case'D':
+			robotRight();
+			break;
+		default:
+			break;
+		}
+
 		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
-		robotLeft();
-		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
-		robotBackwards();
-		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
-		robotRight();
-		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
-		robotSteady();
-		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 4000 / portTICK_PERIOD_MS ) );
 	}
 }
 
 void processRequests(void *para) {
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
+	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
 
-	char client_request;
 	while(1) {
 		process_client_request();
-		client_request = get_next_client_response();
+		clientRequest = get_next_client_response();
+		usart_printf_P(PSTR("\r\n\nClient Request: %c\r\n"), clientRequest);
 		vTaskDelayUntil( &xLastWakeTime, (5000 / portTICK_PERIOD_MS ));
 	}
 }
@@ -99,7 +104,6 @@ int main(void)
 {
 	portENABLE_INTERRUPTS();
 	// turn on the serial port for debugging or for other USART reasons.
-//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
 	usartOpen( USART2_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	usartOpen( USART0_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	gs_initialize_module(USART2_ID, 9600, USART0_ID, 115200);
@@ -107,7 +111,10 @@ int main(void)
 	gs_activate_wireless_connection();
 
 	configure_web_page("Chico: The Robot", "! Control Interface !", HTML_DROPDOWN_LIST);
-	add_element_choice('F', "Forward");
+	add_element_choice('W', "Forward");
+	add_element_choice('S', "Reverse");
+	add_element_choice('A', "Rotate Left");
+	add_element_choice('D', "Rotate Right");
 	start_web_server();
 
 	xTaskCreate(processRequests,
