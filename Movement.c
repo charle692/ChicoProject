@@ -14,7 +14,7 @@ void robotBackward()
 	int left = 2000;
 	extern bool rest;
 	rest = false;
-	changeLED(2);
+	changeLED(3);
 	motion_servo_start (MOTION_WHEEL_RIGHT);
 	motion_servo_set_pulse_width(MOTION_WHEEL_RIGHT, right);
 	motion_servo_start (MOTION_WHEEL_LEFT);
@@ -27,7 +27,7 @@ void robotForward()
 	int left = 3000;
 	extern bool rest;
 	rest = false;
-	changeLED(3);
+	changeLED(2);
 	motion_servo_start (MOTION_WHEEL_RIGHT);
 	motion_servo_set_pulse_width(MOTION_WHEEL_RIGHT, right);
 	motion_servo_start (MOTION_WHEEL_LEFT);
