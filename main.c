@@ -65,19 +65,19 @@ void moveRobot(void *para)
 	char client_request;
 	while(1)
 	{
-//		robotForward();
+		robotForward();
 		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-//		robotLeft();
+		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
+		robotLeft();
 		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-//		robotBackwards();
+		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
+		robotBackwards();
 		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-//		robotRight();
+		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
+		robotRight();
 		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 1000 / portTICK_PERIOD_MS ) );
-//		robotSteady();
+		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
+		robotSteady();
 		distanceAndSpeed();
 		vTaskDelayUntil( &xLastWakeTime, ( 2000 / portTICK_PERIOD_MS ) );
 	}
@@ -91,7 +91,7 @@ void processRequests(void *para) {
 	while(1) {
 		process_client_request();
 		client_request = get_next_client_response();
-		vTaskDelayUntil( &xLastWakeTime, (5500 / portTICK_PERIOD_MS ));
+		vTaskDelayUntil( &xLastWakeTime, (5000 / portTICK_PERIOD_MS ));
 	}
 }
 
@@ -99,11 +99,11 @@ int main(void)
 {
 	portENABLE_INTERRUPTS();
 	// turn on the serial port for debugging or for other USART reasons.
-	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
+//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
 	usartOpen( USART2_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	usartOpen( USART0_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	gs_initialize_module(USART2_ID, 9600, USART0_ID, 115200);
-	gs_set_wireless_ssid("🤖");
+	gs_set_wireless_ssid("🤖 <- This is Chico");
 	gs_activate_wireless_connection();
 
 	configure_web_page("Chico: The Robot", "! Control Interface !", HTML_DROPDOWN_LIST);
@@ -116,27 +116,27 @@ int main(void)
 					NULL,
 					3,
 					NULL);
-//	xTaskCreate(
-//			scheduler,
-//			(0)
-//			,  256				// Tested 9 free @ 208
-//			,  NULL
-//			,  3
-//			,  NULL );
-//
-//	xTaskCreate(move,
-//			(0),
-//			256,
-//			NULL,
-//			3,
-//			NULL);
-//
-//	xTaskCreate(moveRobot,
-//			(0),
-//			256,
-//			NULL,
-//			3,
-//			NULL);
+	xTaskCreate(
+			scheduler,
+			(0)
+			,  256				// Tested 9 free @ 208
+			,  NULL
+			,  3
+			,  NULL );
+
+	xTaskCreate(move,
+			(0),
+			256,
+			NULL,
+			3,
+			NULL);
+
+	xTaskCreate(moveRobot,
+			(0),
+			256,
+			NULL,
+			3,
+			NULL);
 
 
 	I2C_Master_Initialise(0xC0);
