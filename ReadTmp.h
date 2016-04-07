@@ -19,6 +19,7 @@
 #define READTMP_H_
 
 void TaskReadTemperature(uint8_t i);
+int getCurrentTemp(void);
 
 
 #endif /* READTMP_H_ */
