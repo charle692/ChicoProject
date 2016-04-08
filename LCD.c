@@ -9,7 +9,7 @@
 void lcdPrint(uint8_t i)
 {
 	int usartfd = usartOpen(USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
-
+//
 	char str[2];
 	uint8_t rightAverage;
 	uint8_t leftAverage;
@@ -22,8 +22,8 @@ void lcdPrint(uint8_t i)
 	usartWrite(USART1_ID,254);
 	usartWrite(USART1_ID,128);
 	extern uint8_t result[18];
-	extern uint8_t distanceDisplay;
-	//usart_printf_P(PSTR("Distance: %d"), distance);
+	extern uint16_t distanceDisplay;
+	extern uint16_t objectDistance;
 	extern uint8_t speedDisplay;
 
 	for(int i=3;i<18;i=i+2) {
@@ -41,6 +41,10 @@ void lcdPrint(uint8_t i)
 
 	sprintf(str, "D:");
 	sprintf(str + strlen(str), "%" PRIu16, distanceDisplay);
+	usart_fprint(USART1_ID,str);
+
+	sprintf(str, " O:");
+	sprintf(str + strlen(str), "%" PRIu16, objectDistance);
 	usart_fprint(USART1_ID,str);
 
 	//second line

@@ -22,6 +22,7 @@
 #include "Scan.h"
 #include "Movement.h"
 #include "wireless_interface.h"
+#include "Sonar.h"
 
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
@@ -40,6 +41,7 @@ int avgTemperature=0;
 uint8_t speedDisplay;
 uint8_t* ticCount;
 uint16_t distanceDisplay;
+uint16_t objectDistance;
 bool rest;
 int counter;
 char clientRequest;
@@ -51,6 +53,8 @@ void scheduler(void *para)
 
 	while(1) {
 		TaskReadTemperature(0);
+		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
+		objectDistance = getObjectDistance();
 		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
 		lcdPrint(0);
 		vTaskDelayUntil( &xLastWakeTime, ( 400 / portTICK_PERIOD_MS ) );

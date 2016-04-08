@@ -9,6 +9,7 @@ C_SRCS += \
 ../Movement.c \
 ../ReadTmp.c \
 ../Scan.c \
+../Sonar.c \
 ../custom_timer.c \
 ../main.c \
 ../motion.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./Movement.o \
 ./ReadTmp.o \
 ./Scan.o \
+./Sonar.o \
 ./custom_timer.o \
 ./main.o \
 ./motion.o \
@@ -33,6 +35,7 @@ C_DEPS += \
 ./Movement.d \
 ./ReadTmp.d \
 ./Scan.d \
+./Sonar.d \
 ./custom_timer.d \
 ./main.d \
 ./motion.d \
