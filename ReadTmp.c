@@ -32,7 +32,7 @@ void TaskReadTemperature(uint8_t i)
 	}
 }
 
-int getTempSpike(void){
+int getTempSpike(){
 	extern uint8_t result[18];
     return ledTemp - result[1];//difference between current measurement and average to determine spike (if the difference is positive(>1/2/3...trial and error to find good threshold) than a spike occurs)
 }

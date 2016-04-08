@@ -30,6 +30,9 @@ void move()
 		} else if(target) {
 			motion_servo_set_pulse_width(MOTION_SERVO_CENTER,saveCenter);
 			vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
+			if (getTempSpike()<spikeThreshold) {
+				target = false;
+			}
 		} else {
 			motion_servo_set_pulse_width(MOTION_SERVO_CENTER,center);
 
