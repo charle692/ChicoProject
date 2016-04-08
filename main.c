@@ -78,6 +78,9 @@ void moveRobot(void *para)
 		case'D':
 			robotRight();
 			break;
+		case'T':
+			robotSteady();
+			break;
 		default:
 			break;
 		}
@@ -115,6 +118,7 @@ int main(void)
 	add_element_choice('S', "Reverse");
 	add_element_choice('A', "Rotate Left");
 	add_element_choice('D', "Rotate Right");
+	add_element_choice('T', "Stop");
 	start_web_server();
 
 	xTaskCreate(processRequests,

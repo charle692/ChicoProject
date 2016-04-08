@@ -7,6 +7,7 @@
 #include "ReadTmp.h"
 
 static uint8_t currentTemp;
+int ledTemp;
 extern avgTemperature;
 
 void TaskReadTemperature(uint8_t i)
@@ -21,6 +22,7 @@ void TaskReadTemperature(uint8_t i)
 		I2C_Master_Get_Data_From_Transceiver(result+(i*2), 2);
 
 		currentTemp= (result[1]+result[3]+result[5]+result[7]+result[9]+result[11]+result[13]+result[15]+result[17])/9;
+		ledTemp = (result[3]+result[5]+result[7]+result[9]+result[11]+result[13]+result[15]+result[17])/8;
 
         if(avgTemperature==0){
         	avgTemperature = currentTemp;
@@ -31,7 +33,8 @@ void TaskReadTemperature(uint8_t i)
 }
 
 int getTempSpike(void){
-    return currentTemp - avgTemperature;//difference between current measurement and average to determine spike (if the difference is positive(>1/2/3...trial and error to find good threshold) than a spike occurs)
+	extern uint8_t result[18];
+    return ledTemp - result[1];//difference between current measurement and average to determine spike (if the difference is positive(>1/2/3...trial and error to find good threshold) than a spike occurs)
 }
 
 int getCurrentTemp(void) {
