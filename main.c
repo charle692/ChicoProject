@@ -23,6 +23,7 @@
 #include "Movement.h"
 #include "wireless_interface.h"
 #include "Sonar.h"
+#include "custom_timer.h"
 
 /*-----------------------------------------------------------*/
 /* Create a handle for the serial port. */
@@ -97,12 +98,12 @@ void moveRobot(void *para)
 void processRequests(void *para) {
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
+//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
 
 	while(1) {
 		process_client_request();
 		clientRequest = get_next_client_response();
-		usart_printf_P(PSTR("\r\n\nClient Request: %c\r\n"), clientRequest);
+//		usart_printf_P(PSTR("\r\n\nClient Request: %c\r\n"), clientRequest);
 		vTaskDelayUntil( &xLastWakeTime, (5000 / portTICK_PERIOD_MS ));
 	}
 }
@@ -125,6 +126,8 @@ int main(void)
 	add_element_choice('T', "Stop");
 	start_web_server();
 
+	initialize_module_timer0();
+
 	xTaskCreate(processRequests,
 					(0),
 					1024,
@@ -134,21 +137,21 @@ int main(void)
 	xTaskCreate(
 			scheduler,
 			(0)
-			,  256				// Tested 9 free @ 208
+			,  500				// Tested 9 free @ 208
 			,  NULL
 			,  3
 			,  NULL );
 
 	xTaskCreate(move,
 			(0),
-			256,
+			200,
 			NULL,
 			3,
 			NULL);
 
 	xTaskCreate(moveRobot,
 			(0),
-			256,
+			200,
 			NULL,
 			3,
 			NULL);

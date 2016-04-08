@@ -5,11 +5,9 @@
  *      Author: jayhe
  */
 #include "Movement.h"
-
 #include "usartserial.h"
 
-void robotBackward()
-{
+void robotBackward() {
 	int right = 3000;
 	int left = 2000;
 	extern bool rest;
@@ -21,8 +19,7 @@ void robotBackward()
 	motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, left);
 }
 
-void robotForward()
-{
+void robotForward() {
 	int right = 2000;
 	int left = 3000;
 	extern bool rest;
@@ -34,8 +31,7 @@ void robotForward()
 	motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, left);
 }
 
-void robotLeft()
-{
+void robotLeft() {
 	int right = 2000;
 	int left = 2000;
 	extern bool rest;
@@ -47,8 +43,7 @@ void robotLeft()
 	motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, left);
 }
 
-void robotRight()
-{
+void robotRight() {
 	int right = 3000;
 	int left = 3000;
 	extern bool rest;
@@ -60,13 +55,19 @@ void robotRight()
 	motion_servo_set_pulse_width(MOTION_WHEEL_LEFT, left);
 }
 
-void robotSteady()
-{
+void robotSteady() {
 	extern bool rest;
 	changeLED(0);
 	motion_servo_stop(MOTION_WHEEL_RIGHT);
 	motion_servo_stop(MOTION_WHEEL_LEFT);
 	rest = true;
+}
+
+void robotStop() {
+	extern bool rest;
+	changeLED(0);
+	motion_servo_stop(MOTION_WHEEL_RIGHT);
+	motion_servo_stop(MOTION_WHEEL_LEFT);
 }
 
 void distanceAndSpeed()

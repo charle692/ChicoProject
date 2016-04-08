@@ -22,6 +22,7 @@
 void robotForward();
 void robotBackwards();
 void robotLeftRight();
+void robotSteady();
 void robotStop();
 void distanceAndSpeed();
 

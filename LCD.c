@@ -9,7 +9,6 @@
 void lcdPrint(uint8_t i)
 {
 	int usartfd = usartOpen(USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
-//
 	char str[2];
 	uint8_t rightAverage;
 	uint8_t leftAverage;
