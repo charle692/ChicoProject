@@ -15,6 +15,7 @@ void move() {
 	extern bool rest;
 	extern avgTemperature;
 	extern char mode;
+	extern long scanTime;
 	bool panic = false;
 	bool target = false;
 	uint16_t center = 2785;
@@ -23,15 +24,11 @@ void move() {
 	int usartfd;
 	int spikeDirection = 0; //center is 0, left is -1, right is 1
 	int spikeThreshold = 5;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
-	long scanTime = time_in_milliseconds()/1000;
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	motion_servo_start(MOTION_SERVO_CENTER);
 
 	while(1) {
-//		usart_printf_P(PSTR("\r\n\nTime: %u\r\n"), time_in_milliseconds() - scanTime);
-
 		if ((time_in_milliseconds()/1000 - scanTime < 30 && panic == false) || target || mode == 'c') {
 			if(rest) {
 				motion_servo_set_pulse_width(MOTION_SERVO_CENTER,2785);
@@ -42,9 +39,7 @@ void move() {
 				if (getTempSpike()<spikeThreshold) {
 					scanTime = time_in_milliseconds()/1000;
 					target = false;
-//					usart_printf_P(PSTR("\r\n\nTarget gone.\r\n"));
 				}
-//				usart_printf_P(PSTR("\r\n\nTarget found. \r\n"));
 			} else {
 				motion_servo_set_pulse_width(MOTION_SERVO_CENTER,center);
 
@@ -99,6 +94,7 @@ void move() {
 				panic = false;
 				scanTime = time_in_milliseconds();
 				robotStop();
+				rest = false;
 				vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
 			}
 		}

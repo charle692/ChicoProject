@@ -34,7 +34,6 @@
 /*-----------------------------------------------------------*/
 
 /* Main program loop */
-//int main(void) __attribute__((OS_main));
 int usartfd;
 char lcdString[32];
 uint8_t result[18];
@@ -46,6 +45,7 @@ uint16_t objectDistance;
 bool rest;
 int counter;
 char mode = 'c';
+long scanTime;
 
 void scheduler(void *para)
 {
@@ -83,6 +83,9 @@ void moveRobot(char clientRequest) {
 			break;
 		case'a':
 			mode = 'a';
+			robotStop();
+			rest = false;
+			scanTime = time_in_milliseconds()/1000;
 			break;
 		default:
 			break;
@@ -91,6 +94,8 @@ void moveRobot(char clientRequest) {
 		switch(clientRequest) {
 		case'c':
 			mode = 'c';
+			robotStop();
+			rest = false;
 			break;
 		default:
 			break;
@@ -130,8 +135,8 @@ int main(void) {
 	add_element_choice('a', "Attachment Mode");
 	add_element_choice('c', "Command Mode");
 	start_web_server();
-
 	initialize_module_timer0();
+	scanTime = time_in_milliseconds()/1000;
 
 	xTaskCreate(processRequests,
 					(0),
