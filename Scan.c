@@ -23,7 +23,7 @@ void move() {
 	uint16_t count = 2;
 	int usartfd;
 	int spikeDirection = 0; //center is 0, left is -1, right is 1
-	int spikeThreshold = 5;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
+	int spikeThreshold = 3;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 	motion_servo_start(MOTION_SERVO_CENTER);
@@ -87,12 +87,12 @@ void move() {
 		} else {
 			if (panic == false) {
 				panic = true;
-				scanTime = time_in_milliseconds();
+				scanTime = time_in_milliseconds()/1000;
 				robotRight();
 				vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
-			} else if (time_in_milliseconds() - scanTime >= 60000) {
+			} else if (time_in_milliseconds() - scanTime >= 60) {
 				panic = false;
-				scanTime = time_in_milliseconds();
+				scanTime = time_in_milliseconds()/1000;
 				robotStop();
 				rest = false;
 				vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
