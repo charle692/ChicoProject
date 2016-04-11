@@ -7,14 +7,14 @@
 #include "Scan.h"
 #include "ReadTmp.h"
 #include "custom_timer.h"
-#include "usartserial.h"
+//#include "usartserial.h"
 #include "Movement.h"
 
-void move()
-{
+void move() {
 	motion_init();
 	extern bool rest;
 	extern avgTemperature;
+	extern char mode;
 	bool panic = false;
 	bool target = false;
 	uint16_t center = 2785;
@@ -26,13 +26,13 @@ void move()
 	long scanTime = time_in_milliseconds()/1000;
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
+//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 	motion_servo_start(MOTION_SERVO_CENTER);
 
 	while(1) {
 //		usart_printf_P(PSTR("\r\n\nTime: %u\r\n"), time_in_milliseconds() - scanTime);
 
-		if ((time_in_milliseconds()/1000 - scanTime < 30 && panic == false) || target) {
+		if ((time_in_milliseconds()/1000 - scanTime < 30 && panic == false) || target || mode == 'c') {
 			if(rest) {
 				motion_servo_set_pulse_width(MOTION_SERVO_CENTER,2785);
 				vTaskDelayUntil( &xLastWakeTime, ( 25 / portTICK_PERIOD_MS ) );
@@ -42,17 +42,19 @@ void move()
 				if (getTempSpike()<spikeThreshold) {
 					scanTime = time_in_milliseconds()/1000;
 					target = false;
-					usart_printf_P(PSTR("\r\n\nTarget gone.\r\n"));
+//					usart_printf_P(PSTR("\r\n\nTarget gone.\r\n"));
 				}
-				usart_printf_P(PSTR("\r\n\nTarget found. \r\n"));
+//				usart_printf_P(PSTR("\r\n\nTarget found. \r\n"));
 			} else {
 				motion_servo_set_pulse_width(MOTION_SERVO_CENTER,center);
 
 				if(center == 2785){
-					if(getTempSpike()>=spikeThreshold){
-						spikeDirection = 0;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
-						if (getCurrentTemp() > 20) {
-							target = true;
+					if (mode == 'a') {
+						if(getTempSpike()>=spikeThreshold){
+							spikeDirection = 0;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
+							if (getCurrentTemp() > 20) {
+								target = true;
+							}
 						}
 					}
 					vTaskDelayUntil( &xLastWakeTime, ( 25 / portTICK_PERIOD_MS ) );
@@ -62,18 +64,22 @@ void move()
 
 				if(center > 4800){
 					count = -2;
-					if(getTempSpike()>=spikeThreshold){
-						spikeDirection = 1;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
-						if (getCurrentTemp() > 20) {
-							target= true;
+					if (mode == 'a') {
+						if(getTempSpike()>=spikeThreshold){
+							spikeDirection = 1;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
+							if (getCurrentTemp() > 20) {
+								target= true;
+							}
 						}
 					}
 				} else if(center < 1100){
 					count = 2;
-					if(getTempSpike()>=spikeThreshold){
-						spikeDirection = 2;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
-						if (getCurrentTemp() > 20) {
-							target = true;
+					if (mode == 'a') {
+						if(getTempSpike()>=spikeThreshold){
+							spikeDirection = 2;//set the direction to be side which the thermosensor currently points at if a spike is detected at this time (some latency between turning and reading is expected and acceptable)
+							if (getCurrentTemp() > 20) {
+								target = true;
+							}
 						}
 					}
 				}

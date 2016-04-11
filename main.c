@@ -45,7 +45,7 @@ uint16_t distanceDisplay;
 uint16_t objectDistance;
 bool rest;
 int counter;
-char clientRequest;
+char mode = 'c';
 
 void scheduler(void *para)
 {
@@ -54,22 +54,17 @@ void scheduler(void *para)
 
 	while(1) {
 		TaskReadTemperature(0);
-		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
 		objectDistance = getObjectDistance();
-		vTaskDelayUntil( &xLastWakeTime, ( 100 / portTICK_PERIOD_MS ) );
+		distanceAndSpeed();
 		lcdPrint(0);
-		vTaskDelayUntil( &xLastWakeTime, ( 400 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 500 / portTICK_PERIOD_MS ) );
 	}
 }
 
 
 
-void moveRobot(void *para)
-{
-	TickType_t xLastWakeTime;
-	xLastWakeTime = xTaskGetTickCount();
-	while(1)
-	{
+void moveRobot(char clientRequest) {
+	if (mode == 'c') {
 		switch(clientRequest) {
 		case'W':
 			robotForward();
@@ -86,30 +81,38 @@ void moveRobot(void *para)
 		case'T':
 			robotSteady();
 			break;
+		case'a':
+			mode = 'a';
+			break;
 		default:
 			break;
 		}
-
-		distanceAndSpeed();
-		vTaskDelayUntil( &xLastWakeTime, ( 4000 / portTICK_PERIOD_MS ) );
+	} else if (mode == 'a') {
+		switch(clientRequest) {
+		case'c':
+			mode = 'c';
+			break;
+		default:
+			break;
+		}
 	}
 }
 
 void processRequests(void *para) {
+	char clientRequest;
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-//	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
+	usartfd = usartOpen(USART1_ID, 115200, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX); //  serial port: WantedBaud, TxQueueLength, RxQueueLength (8n1)
 
 	while(1) {
-		process_client_request();
-		clientRequest = get_next_client_response();
-//		usart_printf_P(PSTR("\r\n\nClient Request: %c\r\n"), clientRequest);
+		clientRequest = process_client_request();
+		moveRobot(clientRequest);
+		usart_printf_P(PSTR("\r\n\nClient Request: %c\r\n"), clientRequest);
 		vTaskDelayUntil( &xLastWakeTime, (5000 / portTICK_PERIOD_MS ));
 	}
 }
 
-int main(void)
-{
+int main(void) {
 	portENABLE_INTERRUPTS();
 	// turn on the serial port for debugging or for other USART reasons.
 	usartOpen( USART2_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
@@ -124,6 +127,8 @@ int main(void)
 	add_element_choice('A', "Rotate Left");
 	add_element_choice('D', "Rotate Right");
 	add_element_choice('T', "Stop");
+	add_element_choice('a', "Attachment Mode");
+	add_element_choice('c', "Command Mode");
 	start_web_server();
 
 	initialize_module_timer0();
@@ -137,25 +142,17 @@ int main(void)
 	xTaskCreate(
 			scheduler,
 			(0)
-			,  500				// Tested 9 free @ 208
+			,  300				// Tested 9 free @ 208
 			,  NULL
 			,  3
 			,  NULL );
 
 	xTaskCreate(move,
 			(0),
-			200,
+			300,
 			NULL,
 			3,
 			NULL);
-
-	xTaskCreate(moveRobot,
-			(0),
-			200,
-			NULL,
-			3,
-			NULL);
-
 
 	I2C_Master_Initialise(0xC0);
 	vTaskStartScheduler();
