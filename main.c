@@ -59,7 +59,7 @@ void scheduler(void *para)
 		objectDistance = getObjectDistance();
 		distanceAndSpeed();
 		lcdPrint(0);
-		vTaskDelayUntil( &xLastWakeTime, ( 500 / portTICK_PERIOD_MS ) );
+		vTaskDelayUntil( &xLastWakeTime, ( 300 / portTICK_PERIOD_MS ) );
 	}
 }
 

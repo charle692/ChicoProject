@@ -22,7 +22,7 @@ void move() {
 	uint16_t saveCenter = 0;
 	uint16_t count = 2;
 	int spikeDirection = 0; //center is 0, left is -1, right is 1
-	int spikeThreshold = 3;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
+	int spikeThreshold = 2;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
 	motion_servo_start(MOTION_SERVO_CENTER);
