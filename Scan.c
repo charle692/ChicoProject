@@ -16,12 +16,11 @@ void move() {
 	extern avgTemperature;
 	extern char mode;
 	extern long scanTime;
-	bool panic = false;
-	bool target = false;
+	extern bool panic;
+	extern bool target;
 	uint16_t center = 2785;
 	uint16_t saveCenter = 0;
 	uint16_t count = 2;
-	int usartfd;
 	int spikeDirection = 0; //center is 0, left is -1, right is 1
 	int spikeThreshold = 3;//somevalue for which the target temp needs to be above the room temp measured to be considered a spike in readings
 	TickType_t xLastWakeTime;
@@ -36,7 +35,7 @@ void move() {
 			} else if(target) {
 				motion_servo_set_pulse_width(MOTION_SERVO_CENTER,saveCenter);
 				vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
-				if (getTempSpike()<spikeThreshold) {
+				if (getTempSpike()<5) {
 					scanTime = time_in_milliseconds()/1000;
 					target = false;
 				}

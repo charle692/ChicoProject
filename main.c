@@ -38,6 +38,8 @@ int usartfd;
 char lcdString[32];
 uint8_t result[18];
 int avgTemperature=0;
+bool panic = false;
+bool target = false;
 uint8_t speedDisplay;
 uint8_t* ticCount;
 uint16_t distanceDisplay;

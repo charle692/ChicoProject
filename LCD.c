@@ -6,24 +6,35 @@
  */
 #include "LCD.h";
 
+extern uint8_t result[18];
+extern uint16_t distanceDisplay;
+extern uint16_t objectDistance;
+extern uint8_t speedDisplay;
+extern char mode;
+
 void lcdPrint(uint8_t i)
 {
-	int usartfd = usartOpen(USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
-	char str[2];
-	uint8_t rightAverage;
-	uint8_t leftAverage;
+	usartOpen(USART1_ID, 9600, portSERIAL_BUFFER_TX, portSERIAL_BUFFER_RX);
 
-
-	usartWrite(USART1_ID,254); //command mode
-	usartWrite(USART1_ID,1);//clear lcd
+	//clear LCD
+	usartWrite(USART1_ID,254);
+	usartWrite(USART1_ID,1);
 
 	//first line
 	usartWrite(USART1_ID,254);
 	usartWrite(USART1_ID,128);
-	extern uint8_t result[18];
-	extern uint16_t distanceDisplay;
-	extern uint16_t objectDistance;
-	extern uint8_t speedDisplay;
+
+	if (mode == 'c') {
+		printForCommandMode();
+	} else {
+		printForAttachmentMode();
+	}
+}
+
+void printForCommandMode() {
+	char str[2];
+	uint8_t rightAverage;
+	uint8_t leftAverage;
 
 	for(int i=3;i<18;i=i+2) {
 		if(i<=9) {
@@ -63,5 +74,18 @@ void lcdPrint(uint8_t i)
 	sprintf(str, "AL:");
 	sprintf(str + strlen(str), "%d", leftAverage/4);
 	usart_fprint(USART1_ID,str);
+}
+
+void printForAttachmentMode() {
+	extern bool panic;
+	extern bool target;
+
+	if (panic == true) {
+		usart_fprint(USART1_ID, "panicing!");
+	} else if (target == true) {
+		usart_fprint(USART1_ID, "Attached");
+	} else {
+		usart_fprint(USART1_ID, "Searching");
+	}
 }
 

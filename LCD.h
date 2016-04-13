@@ -17,6 +17,8 @@
 #include "semphr.h"
 /* serial interface include file. */
 #include "usartserial.h"
+#include <stdbool.h>
+
 void lcdPrint(uint8_t i);
 
 #endif /* LCD_H_ */
