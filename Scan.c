@@ -89,7 +89,7 @@ void move() {
 				scanTime = time_in_milliseconds()/1000;
 				robotRight();
 				vTaskDelayUntil( &xLastWakeTime, ( 2 / portTICK_PERIOD_MS ) );
-			} else if (time_in_milliseconds() - scanTime >= 60) {
+			} else if (time_in_milliseconds()/1000 - scanTime >= 60) {
 				panic = false;
 				scanTime = time_in_milliseconds()/1000;
 				robotStop();
